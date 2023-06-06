@@ -1,0 +1,54 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+  font-family: inter;
+  src: url("/public/Inter/static/Inter-Regular.ttf");
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  font-family: inter;
+  background: #f8f8f8;
+}
+
+html {
+  scroll-padding-top: 68px;
+}
+
+li a::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  background: #f43f5e;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.active-scroll-spy {
+  background-color: yellowgreen;
+  border-radius: 15px;
+}
+
+@layer utilities {
+  .fade {
+    animation: fade-in 2s ease-in-out;
+  }
+}
