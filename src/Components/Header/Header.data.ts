@@ -1,7 +1,7 @@
 export const navigationLinksData = [
   "home",
   "technologies",
-  "about me",
+  "about",
   "projects",
   "contact"
 ];
