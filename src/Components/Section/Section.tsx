@@ -1,9 +1,18 @@
 import React, { FunctionComponent } from "react";
 import { SectionProps } from "./Section.types";
 
-const Section: FunctionComponent<SectionProps> = ({ children, className, id }) => {
+const Section: FunctionComponent<SectionProps> = ({
+  children,
+  className,
+  id,
+  sectionRef
+}) => {
   return (
-    <section id={id} className={`w-full p-3 ${className}`}>
+    <section
+      ref={sectionRef}
+      id={id}
+      className={`w-full px-5 md:px-20 ${className}`}
+    >
       {children}
     </section>
   );

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useActiveSection = (sections: NodeListOf<HTMLElement>) => {
+const useScrollSpy = (sections: NodeListOf<HTMLElement>) => {
     const [activeSection, setActiveSection] = useState<string | null>('');
 
     useEffect(() => {
@@ -35,4 +35,4 @@ const useActiveSection = (sections: NodeListOf<HTMLElement>) => {
     return activeSection;
   };
   
-  export default useActiveSection;
+  export default useScrollSpy;
