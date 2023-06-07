@@ -66,7 +66,7 @@ const Header = () => {
       </div>
 
       {!mobileMenuActive && (
-        <div className="w-full h-[50px] bg-white z-20 fixed md:hidden">
+        <div className="w-full h-[68px] bg-white z-20 fixed md:hidden">
           <BurgerMenu onClick={showBUrgerMenu} />
         </div>
       )}
