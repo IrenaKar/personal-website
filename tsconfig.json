@@ -4,6 +4,9 @@
     "jsx": "react",
     "module": "esnext",
     "moduleResolution": "node",
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "baseUrl": "src",
     "lib": [
       "dom",
       "esnext"

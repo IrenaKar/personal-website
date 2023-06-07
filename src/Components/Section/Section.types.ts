@@ -4,4 +4,5 @@ export interface SectionProps {
   children: ReactElement;
   className?: string;
   id?: string;
+  sectionRef?: any;
 }
