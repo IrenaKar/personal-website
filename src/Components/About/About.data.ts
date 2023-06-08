@@ -1,4 +1,4 @@
-export const aboutData = {
+export const personalData = {
   personalBiography: `<b>A frontend developer based in dynamic Berlin.</b> While my professional journey has taken me through various fields, it is in frontend development that I have discovered my true passion and purpose.
   Coming from a diverse professional background, including financial management and accounting, I found myself most fulfilled when I started writing lines of code and bringing designs to life. 
   I love the challenges that frontend development presents and the opportunity to constantly explore and push the boundaries of what is possible.

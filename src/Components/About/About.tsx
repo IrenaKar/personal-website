@@ -1,6 +1,6 @@
 import Section from "../Section/Section";
 import React, { FunctionComponent } from "react";
-import { aboutData } from "./About.data";
+import { personalData } from "./About.data";
 import { Download, GithubIcon, LinkedinIcon } from "../../assets";
 
 const About: FunctionComponent = () => {
@@ -11,23 +11,23 @@ const About: FunctionComponent = () => {
     >
       <>
         <div className="text-3xl font-bold text-stone-300 mr-auto mb-10">
-          about
+          {"about"}
         </div>
         <div>
           <p
             className="mb-5 text-stone-600 max-w-full text-left"
-            dangerouslySetInnerHTML={{ __html: aboutData.personalBiography }}
+            dangerouslySetInnerHTML={{ __html: personalData.personalBiography }}
           ></p>
           <p
             className="mb-5 text-stone-600 max-w-full text-left"
             dangerouslySetInnerHTML={{
-              __html: aboutData.professionalBiography.description
+              __html: personalData.professionalBiography.description
             }}
           ></p>
         </div>
 
         <ul className="list-disc mr-auto pl-3 sm:pl-10">
-          {aboutData.professionalBiography.roles.map((roleItem) => (
+          {personalData.professionalBiography.roles.map((roleItem) => (
             <li className="mb-3 text-stone-600">
               <span className="font-bold mr-2">{`${roleItem.company} - `}</span>
               <span>{roleItem.role}</span>
@@ -36,19 +36,21 @@ const About: FunctionComponent = () => {
           ))}
         </ul>
 
-        <div className="flex ml-auto gap-2 mr-5 mt-5">
-          <span className="font-bold text-stone-500 whitespace-nowrap">
+        <div className="flex ml-auto gap-5 mr-5 mt-5">
+        <div className="flex flex-row gap-2">
+        <span className="font-bold text-stone-500 whitespace-nowrap">
             {"Find me on:"}
           </span>
-          <a target="_blank" href={aboutData.linkedIn}>
+        <a target="_blank" href={personalData.linkedIn}>
             <LinkedinIcon width={20} height={20} />
           </a>
-          <a target="_blank" href={aboutData.github}>
+          <a target="_blank" href={personalData.github}>
             <GithubIcon width={20} height={20} />
           </a>
+        </div>
           <a
             className="font-bold text-stone-500 flex gap-2"
-            href={aboutData.resume}
+            href={personalData.resume}
             download="Resume Irena Karamachoska"
           >
             {"Resume:"}

@@ -11,7 +11,7 @@ const Section: FunctionComponent<SectionProps> = ({
     <section
       ref={sectionRef}
       id={id}
-      className={`w-full px-5 py-20 md:px-20 ${className}`}
+      className={`w-full px-5 py-20 md:px-20 lg:px-40 ${className}`}
     >
       {children}
     </section>
