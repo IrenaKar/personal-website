@@ -53,7 +53,12 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
         <div className="flex flex-col w-full py-2">
           <div className="text-md font-bold text-stone-600 mb-3">{title}</div>
           <div className="h-full flex flex-col gap-8 lg:gap-1 justify-between">
-            <div className="text-stone-500 text-sm">{description}</div>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: description
+              }}
+              className="text-stone-500 text-sm"
+            />
 
             <div className="flex flex-col items-start gap-3">
               <span className="text-stone-400 text-sm font-semibold">

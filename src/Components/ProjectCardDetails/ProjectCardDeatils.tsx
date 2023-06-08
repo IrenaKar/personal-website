@@ -11,12 +11,12 @@ const ProjectCardDetails: FunctionComponent<ProjectCardDetailsProps> = ({
       <div className="font-bold text-sm hidden sm:block">
         {"Project Details"}
       </div>
-      <p
+      <div
         className="text-sm text-stone-600 text-left mt-0 sm:mt-3"
         dangerouslySetInnerHTML={{
           __html: description
         }}
-      ></p>
+      />
     </div>
   );
 };

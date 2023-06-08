@@ -13,7 +13,7 @@ const Projects: FunctionComponent = () => {
         <div className="text-3xl font-bold text-stone-300 mr-auto mb-10">
           {"projects"}
         </div>
-        <div className="flex flex-col w-full lg:w-[90%] gap-5 mr-auto">
+        <div className="flex flex-col w-full gap-5 mr-auto">
           {projectsData.map((project, index) => (
             <ProjectCard
               key={index}
