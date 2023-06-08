@@ -65,6 +65,7 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
             <div className="flex flex-col sm:flex-row w-full justify-between gap-8 sm:gap-0">
               <div className="flex flex-row gap-5 w-full sm:w-fit justify-between">
                 <a
+                  target="_blank"
                   href={projectUrl}
                   className="flex gap-1 border-b-2 pb-1 border-stone-400"
                 >
@@ -74,6 +75,7 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
                   </span>
                 </a>
                 <a
+                  target="_blank"
                   href={github}
                   className="flex gap-1 border-b-2 pb-1 border-stone-400"
                 >

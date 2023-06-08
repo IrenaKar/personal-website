@@ -12,7 +12,7 @@ const Technologies: FunctionComponent<TechnologiesProps> = ({ sectionRef }) => {
     >
       <div className="flex flex-col items-center">
         <div className="text-3xl font-bold text-stone-300 mr-auto mb-10">
-          technologies
+          {"technologies"}
         </div>
         <div className="mb-10">
           <p
