@@ -1,3 +1,5 @@
+import { RefObject } from "react";
+
 export interface TechnologiesProps {
-  sectionRef: any;
+  sectionRef: RefObject<HTMLDivElement>;
 }

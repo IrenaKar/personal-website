@@ -1,3 +1,5 @@
+import { RefObject } from "react";
+
 export interface HomeProps {
-  sectionRef: any;
+  sectionRef: RefObject<HTMLDivElement>;
 }
