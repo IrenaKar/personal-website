@@ -1,38 +1,37 @@
 import { useEffect, useState } from "react";
 
-const useScrollSpy = (sections: NodeListOf<HTMLElement>) => {
-    const [activeSection, setActiveSection] = useState<string | null>('');
+const useScrollSpy = (
+  sections: NodeListOf<HTMLElement>,
+  defaultSectionId: string
+) => {
+  const [activeSection, setActiveSection] = useState<string | null>(
+    defaultSectionId
+  );
 
-    useEffect(() => {
-      const handleScroll = () => {
-        let currentSectionId = null;
-  
-        sections.forEach((section) => {
-          const rect = section.getBoundingClientRect();
-          const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
-  
-          if (isVisible) {
-            currentSectionId = section.getAttribute('id');
-          }
-        });
-  
-        if (!currentSectionId && sections.length > 0) {
-          currentSectionId = sections[0].getAttribute('id');
-        }
-  
-        setActiveSection(currentSectionId);
-      };
-  
-      handleScroll();
-  
-      window.addEventListener('scroll', handleScroll);
-  
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
-    }, [activeSection]);
-  
-    return activeSection;
-  };
-  
-  export default useScrollSpy;
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+
+      const currentSection = Array.from(sections).find((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        return (
+          scrollPosition >= sectionTop &&
+          scrollPosition < sectionTop + sectionHeight
+        );
+      });
+
+      setActiveSection(currentSection ? currentSection.id : null);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [sections]);
+
+  return activeSection;
+};
+
+export default useScrollSpy;

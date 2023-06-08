@@ -1,6 +1,10 @@
 import React, { FunctionComponent, useState } from "react";
 import { ProjectCardProps } from "./ProjectCard.types";
-import { ArrowDownIcon, GithubIcon } from "../../assets/index";
+import {
+  ArrowDownIcon,
+  ExternalLinkIcon,
+  GithubIcon
+} from "../../assets/index";
 import ProjectCardDetails from "../ProjectCardDetails/ProjectCardDeatils";
 
 const ProjectCard: FunctionComponent<ProjectCardProps> = ({
@@ -18,11 +22,27 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
     setShowDetails(!showDetails);
   };
 
+  const technologiesRender = resources.map((item) => {
+    if (item === "Bubble.io") {
+      return <div className="text-sm text-stone-600">{item}</div>;
+    } else {
+      return (
+        <div className="w-[25px] h-[25px]">
+          <img
+            className="block w-full h-full"
+            src={require(`../../assets/logos/${item}.png`).default}
+            alt={item}
+          />
+        </div>
+      );
+    }
+  });
+
   return (
-    <div className="gap-2 rounded-md sm:rounded-none shadow bg-white">
-      <div className="flex flex-col sm:flex-row w-full">
+    <div className="gap-2 rounded-md shadow bg-white p-5 sm:p-7">
+      <div className="flex flex-col lg:flex-row w-full gap-4">
         <div
-          className="w-full sm:w-[150px] h-[200px] sm:h-[150px] bg-cover rounded-tr-md sm:rounded-tr-none rounded-tl-md sm:rounded-tl-none"
+          className="w-full lg:min-w-[250px] lg:w-[250px] h-[250px] bg-cover rounded-md bg-center"
           style={{
             backgroundImage: `url(${
               require(`../../assets/projectsImages/${image}`).default
@@ -30,53 +50,55 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
           }}
         ></div>
 
-        <div className="flex flex-col p-3 w-full">
+        <div className="flex flex-col w-full py-2">
           <div className="text-md font-bold text-stone-600 mb-3">{title}</div>
-          <div className="h-full flex flex-col gap-3 sm:gap-1 justify-between">
-            <div className="text-stone-600 text-sm">{description}</div>
-            <div className="flex items-center gap-2">
-              <span className="text-stone-600 text-sm">{"Technologies: "}</span>
-              <div className="flex gap-2">
-                {resources.map((item) => {
-                  if (item === "Bubble.io") {
-                    return <div className="font-semibold">{item}</div>;
-                  } else {
-                    return (
-                      <div className="w-[16px] h-[16px]">
-                        <img
-                          className="block w-full h-full"
-                          src={
-                            require(`../../assets/logos/${item}.png`).default
-                          }
-                          alt={item}
-                        />
-                      </div>
-                    );
-                  }
-                })}
-              </div>
+          <div className="h-full flex flex-col gap-8 lg:gap-1 justify-between">
+            <div className="text-stone-500 text-sm">{description}</div>
+
+            <div className="flex flex-col items-start gap-3">
+              <span className="text-stone-400 text-sm font-semibold">
+                {"Technologies: "}
+              </span>
+              <div className="flex gap-3">{technologiesRender}</div>
             </div>
 
-            <div className="flex flex-row w-full justify-between">
-              <div className="flex flex-row gap-3">
+            <div className="flex flex-col sm:flex-row w-full justify-between gap-8 sm:gap-0">
+              <div className="flex flex-row gap-5 w-full sm:w-fit justify-between">
                 <a
                   href={projectUrl}
-                  className="text-stone-500 text-sm font-bold hover:text-stone-600"
+                  className="flex gap-1 border-b-2 pb-1 border-stone-400"
                 >
-                  {"View project"}
+                  <ExternalLinkIcon width={16} height={16} />
+                  <span className="text-stone-500 text-xs font-bold hover:text-stone-600 underline-offset-1">
+                    {"View project"}
+                  </span>
                 </a>
-                <a href={github}>
-                  <GithubIcon width={20} height={20} />
+                <a
+                  href={github}
+                  className="flex gap-1 border-b-2 pb-1 border-stone-400"
+                >
+                  <GithubIcon width={16} height={16} />
+                  <span className="text-stone-500 text-xs font-bold hover:text-stone-600 underline-offset-1">
+                    {"View gitHub"}
+                  </span>
                 </a>
               </div>
-              <ArrowDownIcon
+
+              <div
                 onClick={showDetailsHandler}
-                className={`${
-                  showDetails ? "rotate-180" : "rotate-0"
-                } cursor-pointer`}
-                width={20}
-                height={20}
-              />
+                className="flex flex-row gap-5 cursor-pointer lg:mr-5 w-full sm:w-fit justify-between"
+              >
+                <span className="text-xs text-stone-500 font-semibold">
+                  {"View Details"}
+                </span>
+                <ArrowDownIcon
+                  className={`${
+                    showDetails ? "rotate-180" : "rotate-0"
+                  } cursor-pointer`}
+                  width={16}
+                  height={16}
+                />
+              </div>
             </div>
           </div>
         </div>

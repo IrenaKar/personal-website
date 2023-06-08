@@ -1,12 +1,24 @@
 import React, { FunctionComponent, ReactElement } from "react";
 import { ProjectCardDetailsProps } from "./ProjectCardDetails.types";
 
-const ProjectCardDetails:FunctionComponent<ProjectCardDetailsProps> = ({longDescription}): ReactElement => {
-    const description = longDescription;
+const ProjectCardDetails: FunctionComponent<ProjectCardDetailsProps> = ({
+  longDescription
+}): ReactElement => {
+  const description = longDescription;
 
-    return <div className="p-3 text-stone-600 text-sm">
-        {description}
+  return (
+    <div className="pt-5 sm:pt-10 text-stone-400">
+      <div className="font-bold text-sm hidden sm:block">
+        {"Project Details"}
+      </div>
+      <p
+        className="text-sm text-stone-600 text-left mt-0 sm:mt-3"
+        dangerouslySetInnerHTML={{
+          __html: description
+        }}
+      ></p>
     </div>
-}
+  );
+};
 
 export default ProjectCardDetails;

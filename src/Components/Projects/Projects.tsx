@@ -10,10 +10,10 @@ const Projects: FunctionComponent = () => {
       className="flex flex-col items-center justify-center"
     >
       <>
-        <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-stone-300 mr-auto mb-10">
+        <div className="text-3xl font-bold text-stone-300 mr-auto mb-10">
           projects
         </div>
-        <div className="flex flex-col w-full md:w-[90%] gap-5 mr-auto">
+        <div className="flex flex-col w-full lg:w-[90%] gap-5 mr-auto">
           {projectsData.map((project, index) => (
             <ProjectCard
               key={index}
