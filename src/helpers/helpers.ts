@@ -6,8 +6,8 @@ export const onScrollSection = (
     e.currentTarget.href.split("#")[1]
   );
   if (target) {
-    const targetPosition = target.getBoundingClientRect().top;
-    const offsetPosition = targetPosition - 68;
+    const targetPosition = target.getBoundingClientRect().top + 5;
+    const offsetPosition = targetPosition;
     window.scrollTo({
       top: window.pageYOffset + offsetPosition,
       behavior: "smooth"
