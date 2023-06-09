@@ -1,21 +1,15 @@
+const prod = process.env.NODE_ENV === 'production';
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  mode: 'production',
+  mode: prod ? 'production' : 'development',
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'), 
-    filename: 'bundle.js',
-    publicPath: '/',
   },
-  performance: {
-    hints: false,
-    maxEntrypointSize: 512000,
-    maxAssetSize: 512000
-},
   module: {
     rules: [
       {
@@ -49,12 +43,14 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
+              outputPath: 'images/',
             },
           },
         ],
       },
     ],
   },
+  devtool: prod ? undefined : 'source-map',
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
