@@ -1,9 +1,9 @@
 import ProjectCard from "../ProjectCard/ProjectCard";
 import Section from "../Section/Section";
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, ReactElement } from "react";
 import { projectsData } from "./Projects.data";
 
-const Projects: FunctionComponent = () => {
+const Projects: FunctionComponent = ():ReactElement => {
   return (
     <Section
       id="projects"
