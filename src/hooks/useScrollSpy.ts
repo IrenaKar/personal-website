@@ -1,3 +1,4 @@
+import { scrollToSectionHandler } from "../helpers/helpers";
 import { useEffect, useState } from "react";
 
 const useScrollSpy = (
@@ -7,6 +8,8 @@ const useScrollSpy = (
   const [activeSection, setActiveSection] = useState<string | null>(
     defaultSectionId
   );
+
+  const newActiveSection = sessionStorage.getItem("activeSection");
 
   useEffect(() => {
     const handleScroll = (): void => {
@@ -23,19 +26,15 @@ const useScrollSpy = (
 
       const newActiveSection = currentSection ? currentSection.id : null;
       setActiveSection(newActiveSection);
-      sessionStorage.setItem("activeSection", newActiveSection || defaultSectionId);
+      sessionStorage.setItem(
+        "activeSection",
+        newActiveSection || defaultSectionId
+      );
     };
 
-    window.addEventListener("scroll", handleScroll);
+    setActiveSection(newActiveSection ?? defaultSectionId);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [activeSection]);
-
-  useEffect(() => {
-    const newActiveSection = sessionStorage.getItem("activeSection");
-    setActiveSection(newActiveSection);
+    scrollToSectionHandler(handleScroll);
   }, [activeSection]);
 
   return activeSection;

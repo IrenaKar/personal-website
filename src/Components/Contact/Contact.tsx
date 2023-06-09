@@ -21,7 +21,7 @@ const Contact: FunctionComponent = (): ReactElement => {
           </div>
           <div className="text-sm">
             {
-              " Write me a message in order to arrange a meeting or find me on my"
+              " Write me a message in order to arrange a meeting or find me on my "
             }
             <a
               className="underline underline-offset-2 font-bold"

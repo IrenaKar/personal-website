@@ -4,7 +4,6 @@ import { ProjectCardDetailsProps } from "./ProjectCardDetails.types";
 const ProjectCardDetails: FunctionComponent<ProjectCardDetailsProps> = ({
   longDescription
 }): ReactElement => {
-  const description = longDescription;
 
   return (
     <div className="pt-5 sm:pt-10 text-stone-400">
@@ -14,7 +13,7 @@ const ProjectCardDetails: FunctionComponent<ProjectCardDetailsProps> = ({
       <div
         className="text-sm text-stone-600 text-left mt-0 sm:mt-3"
         dangerouslySetInnerHTML={{
-          __html: description
+          __html: longDescription
         }}
       />
     </div>

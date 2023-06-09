@@ -44,3 +44,10 @@ export const sendEmail = (
     e.target.reset();
   }
 };
+
+export const scrollToSectionHandler = (handleScroll: () => void) => {
+  window.addEventListener("scroll", handleScroll);
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+};
