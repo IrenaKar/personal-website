@@ -1,5 +1,5 @@
 import { RefObject } from "react";
 
-export interface HomeProps {
+export interface TechnologiesProps {
   sectionRef: RefObject<HTMLDivElement>;
 }
