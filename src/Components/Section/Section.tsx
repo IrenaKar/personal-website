@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, ReactElement } from "react";
 import { SectionProps } from "./Section.types";
 
 const Section: FunctionComponent<SectionProps> = ({
@@ -6,7 +6,7 @@ const Section: FunctionComponent<SectionProps> = ({
   className,
   id,
   sectionRef
-}) => {
+}):ReactElement => {
   return (
     <section
       ref={sectionRef}

@@ -1,17 +1,22 @@
-import React, { useState, useEffect, FunctionComponent } from "react";
+import React, {
+  useState,
+  useEffect,
+  FunctionComponent,
+  ReactElement
+} from "react";
 import Section from "../Section/Section";
 import { ArrowDownIcon } from "../../assets/index";
 import { headingWordsGroup, subHeadingWordsGroup } from "./Home.data";
 import { HomeProps } from "./Home.type";
 import useTypingEffect from "../../hooks/useTypingEffect";
 
-const Home: FunctionComponent<HomeProps> = ({ sectionRef }) => {
+const Home: FunctionComponent<HomeProps> = ({ sectionRef }): ReactElement => {
   const typingHeading = useTypingEffect(headingWordsGroup);
 
   const [minHeight, setMinHeight] = useState(false);
   const [showSubHeading, setShowSubHeading] = useState(false);
   const [showArrow, setShowArrow] = useState(false);
-  const [offset, setOffset] = useState(0);
+  const [offset, setOffset] = useState(5);
 
   const handleScroll = () => setOffset(window.pageYOffset);
 
@@ -51,7 +56,7 @@ const Home: FunctionComponent<HomeProps> = ({ sectionRef }) => {
     >
       <>
         <div className="min-h-[300px] sm:min-h-[210px]">
-          <h1 className="max-w-[300px] sm:max-w-[100%] self-start text-7xl lg:text-8xl xl:text-9xl font-bold text-stone-400 mb-5 leading-tight">
+          <h1 className="max-w-[300px] sm:max-w-[100%] self-start text-7xl lg:text-8xl xl:text-9xl font-bold text-stone-400 mb-5 leading-tight md:whitespace-nowrap">
             {typingHeading}
           </h1>
           <div className={showSubHeading ? "block" : "hidden"}>
@@ -73,7 +78,7 @@ const Home: FunctionComponent<HomeProps> = ({ sectionRef }) => {
             onClick={handleBackClick}
           >
             <ArrowDownIcon
-              className="animate-bounce absolute bottom-3 left-[50%] translate-x-[50%]"
+              className="animate-bounce absolute bottom-3 left-[50%] translate-x-[-50%]"
               width={50}
               height={50}
             />

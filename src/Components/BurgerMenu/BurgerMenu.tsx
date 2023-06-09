@@ -1,7 +1,7 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, ReactElement } from "react";
 import { BurgerMenuProps } from "./BurgerMenu.types";
 
-const BurgerMenu: FunctionComponent<BurgerMenuProps> = ({ onClick }) => {
+const BurgerMenu: FunctionComponent<BurgerMenuProps> = ({ onClick }):ReactElement => {
   return (
     <div
       onClick={onClick}

@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from "react";
+import React, { FunctionComponent, ReactElement, useState } from "react";
 import { ProjectCardProps } from "./ProjectCard.types";
 import {
   ArrowDownIcon,
@@ -15,19 +15,19 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
   projectUrl,
   github,
   longDescription
-}) => {
+}): ReactElement => {
   const [showDetails, setShowDetails] = useState(false);
 
   const showDetailsHandler = () => {
     setShowDetails(!showDetails);
   };
 
-  const technologiesRender = resources.map((item) => {
+  const technologiesRender = resources.map((item, index) => {
     if (item === "Bubble.io") {
-      return <div className="text-sm text-stone-600">{item}</div>;
+      return <div key={index} className="text-sm text-stone-600">{item}</div>;
     } else {
       return (
-        <div className="w-[25px] h-[25px]">
+        <div key={index} className="w-[25px] h-[25px]">
           <img
             className="block w-full h-full"
             src={require(`../../assets/logos/${item}.png`).default}
@@ -76,19 +76,22 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
                 >
                   <ExternalLinkIcon width={16} height={16} />
                   <span className="text-stone-500 text-xs font-bold hover:text-stone-600 underline-offset-1">
-                    {"View project"}
+                    {!github ? "View website" : "View project"}
                   </span>
                 </a>
-                <a
-                  target="_blank"
-                  href={github}
-                  className="flex gap-1 border-b-2 pb-1 border-stone-400"
-                >
-                  <GithubIcon width={16} height={16} />
-                  <span className="text-stone-500 text-xs font-bold hover:text-stone-600 underline-offset-1">
-                    {"View gitHub"}
-                  </span>
-                </a>
+                
+                {github && (
+                  <a
+                    target="_blank"
+                    href={github}
+                    className="flex gap-1 border-b-2 pb-1 border-stone-400"
+                  >
+                    <GithubIcon width={16} height={16} />
+                    <span className="text-stone-500 text-xs font-bold hover:text-stone-600 underline-offset-1">
+                      {"View gitHub"}
+                    </span>
+                  </a>
+                )}
               </div>
 
               <div

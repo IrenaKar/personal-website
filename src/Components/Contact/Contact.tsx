@@ -1,9 +1,9 @@
-import React, { FunctionComponent, useRef } from "react";
+import React, { FunctionComponent, ReactElement, useRef } from "react";
 import Section from "../Section/Section";
 import { sendEmail } from "../../helpers/helpers";
 import { personalData } from "../About/About.data";
 
-const Contact: FunctionComponent = () => {
+const Contact: FunctionComponent = (): ReactElement => {
   const formRef = useRef<HTMLFormElement | null>(null);
 
   return (
@@ -15,24 +15,26 @@ const Contact: FunctionComponent = () => {
         <div className="text-stone-600 mr-auto sm:w-[50%] lg:w-[40%] flex flex-col sm:gap-5">
           <div className="text-2xl lg:text-3xl xl:text-4xl leading-snug mb-5">
             <span className="font-bold">
-              I am super exited to talk in details about my projects
+              {"I am super exited to talk in details about my projects"}
             </span>
-            <span className="block">and share my experience with you!</span>
+            <span className="block">{"and share my experience with you!"}</span>
           </div>
-          <div>
-            Write me a message in order to arrange a meeting or find me on my{" "}
+          <div className="text-sm">
+            {
+              " Write me a message in order to arrange a meeting or find me on my"
+            }
             <a
               className="underline underline-offset-2 font-bold"
               href={personalData.linkedIn}
             >
-              LinkedIn
+              {"LinkedIn"}
             </a>{" "}
-            profile.
+            {"profile."}
           </div>
         </div>
 
         <form
-          className="flex flex-col w-full sm:w-[50%] lg:w-[60%] gap-5"
+          className="flex flex-col w-full sm:w-[50%] gap-3"
           ref={formRef}
           onSubmit={(e) => sendEmail(e, formRef)}
         >

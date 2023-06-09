@@ -1,9 +1,9 @@
 import Section from "../Section/Section";
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, ReactElement } from "react";
 import { personalData } from "./About.data";
 import { Download, GithubIcon, LinkedinIcon } from "../../assets";
 
-const About: FunctionComponent = () => {
+const About: FunctionComponent = (): ReactElement => {
   return (
     <Section
       id="about"
@@ -27,8 +27,8 @@ const About: FunctionComponent = () => {
         </div>
 
         <ul className="list-disc mr-auto pl-3 sm:pl-10">
-          {personalData.professionalBiography.roles.map((roleItem) => (
-            <li className="mb-3 text-stone-600">
+          {personalData.professionalBiography.roles.map((roleItem, index) => (
+            <li key={index} className="mb-3 text-stone-600">
               <span className="font-bold mr-2">{`${roleItem.company} - `}</span>
               <span>{roleItem.role}</span>
               <span className="block">{roleItem.date}</span>
@@ -50,7 +50,7 @@ const About: FunctionComponent = () => {
         </div>
           <a
             className="font-bold text-stone-500 flex gap-2"
-            href={personalData.resume}
+            href={require(`${personalData.resume}`).default}
             download="Resume Irena Karamachoska"
           >
             {"Resume:"}

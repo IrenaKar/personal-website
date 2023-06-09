@@ -16,7 +16,7 @@ module.exports = {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         resolve: {
-          extensions: ['.ts', '.tsx', '.js', '.json', ',svg'],
+          extensions: ['.ts', '.tsx', '.js', '.json', '.svg',],
         },
         use: 'ts-loader',
       },
@@ -37,7 +37,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(pdf|png|jpe?g|gif)$/i,
         use: [
           {
             loader: 'file-loader',
@@ -53,7 +53,7 @@ module.exports = {
   devtool: prod ? undefined : 'source-map',
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.html',
+      template: './public/index.html',
     }),
     new MiniCssExtractPlugin(),
   ],

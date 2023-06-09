@@ -3,13 +3,13 @@ import { useEffect, useState } from "react";
 const useScrollSpy = (
   sections: NodeListOf<HTMLElement>,
   defaultSectionId: string
-) => {
+): string | null => {
   const [activeSection, setActiveSection] = useState<string | null>(
     defaultSectionId
   );
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = (): void => {
       const scrollPosition = window.scrollY;
 
       const currentSection = Array.from(sections).find((section) => {
@@ -21,7 +21,9 @@ const useScrollSpy = (
         );
       });
 
-      setActiveSection(currentSection ? currentSection.id : null);
+      const newActiveSection = currentSection ? currentSection.id : null;
+      setActiveSection(newActiveSection);
+      sessionStorage.setItem("activeSection", newActiveSection || defaultSectionId);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -29,7 +31,12 @@ const useScrollSpy = (
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [sections]);
+  }, [activeSection]);
+
+  useEffect(() => {
+    const newActiveSection = sessionStorage.getItem("activeSection");
+    setActiveSection(newActiveSection);
+  }, [activeSection]);
 
   return activeSection;
 };

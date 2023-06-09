@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 
 export const onScrollSection = (
   e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-) => {
+): void => {
   e.preventDefault();
   const target = window.document.getElementById(
     e.currentTarget.href.split("#")[1]
