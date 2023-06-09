@@ -1,10 +1,15 @@
-import React, { useState, useEffect, FunctionComponent, ReactElement } from "react";
+import React, {
+  useState,
+  useEffect,
+  FunctionComponent,
+  ReactElement
+} from "react";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import { navigationLinksData } from "./Header.data";
 import useScrollSpy from "../../hooks/useScrollSpy";
 import { onScrollSection } from "../../helpers/helpers";
 
-const Header:FunctionComponent = ():ReactElement => {
+const Header: FunctionComponent = (): ReactElement => {
   const [mobileMenuActive, setMobileMenuActive] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(false);
 
@@ -31,7 +36,7 @@ const Header:FunctionComponent = ():ReactElement => {
     <div>
       <div
         className={`${mobileMenuActive ? "flex bg-white" : "hidden"} ${
-          scrollPosition ? "bg-white" : "bg-stone-50"
+          scrollPosition ? "bg-white shadow-md" : "bg-stone-50"
         } z-10 fixed md:flex w-[100vw] h-[100vh] md:h-fit justify-between p-5`}
       >
         <ul className="flex flex-col gap-5 md:flex-row md:gap-16 md:pl-0 md:mx-auto mt-10 md:mt-0">

@@ -41,7 +41,7 @@ const Contact: FunctionComponent = (): ReactElement => {
           <div className="flex flex-col gap-1">
             <label className="text-stone-600 text-sm">{"Subject"}</label>
             <input
-              placeholder="White your subject"
+              placeholder="Write your subject"
               className="py-1 outline-stone-200 text-sm bg-stone-100 p-2 text-stone-400 h-[40px] rounded"
               type="text"
               name="subject"
@@ -52,7 +52,7 @@ const Contact: FunctionComponent = (): ReactElement => {
           <div className="flex flex-col gap-1">
             <label className="text-stone-600 text-sm">{"Message"}</label>
             <textarea
-              placeholder="White your message"
+              placeholder="Write your message"
               className="outline-stone-200 text-sm bg-stone-100 p-2 text-stone-400"
               name="message"
               rows={4}
@@ -65,7 +65,7 @@ const Contact: FunctionComponent = (): ReactElement => {
             <div className="flex flex-col gap-1 w-[70%]">
               <label className="text-stone-600 text-sm">{"Your email"}</label>
               <input
-                placeholder="White your email address"
+                placeholder="Write your email address"
                 className="py-1 outline-stone-200 text-sm bg-stone-100 p-2 text-stone-400 h-[40px] rounded"
                 type="email"
                 name="email"
