@@ -36,5 +36,5 @@ export const personalData = {
   },
   linkedIn: "https://www.linkedin.com/in/irena-karamachoska-55944a204/",
   github: "https://github.com/IrenaKar",
-  resume: "./IrenaKaramachoskaResume2023.pdf"
+  resume: "./IrenaKaramachoskaResume2023"
 };

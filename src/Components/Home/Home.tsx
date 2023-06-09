@@ -18,7 +18,7 @@ const Home: FunctionComponent<HomeProps> = ({ sectionRef }): ReactElement => {
   const [showArrow, setShowArrow] = useState(false);
   const [offset, setOffset] = useState(5);
 
-  const handleScroll = () => setOffset(window.pageYOffset);
+  const handleScroll = () => setOffset(window.pageYOffset - 5);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);

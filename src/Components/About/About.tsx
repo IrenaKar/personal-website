@@ -50,7 +50,7 @@ const About: FunctionComponent = (): ReactElement => {
         </div>
           <a
             className="font-bold text-stone-500 flex gap-2"
-            href={require(`${personalData.resume}`).default}
+            href={require(`${personalData.resume}.pdf`).default}
             download="Resume Irena Karamachoska"
           >
             {"Resume:"}
