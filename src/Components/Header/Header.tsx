@@ -7,7 +7,7 @@ import React, {
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import { navigationLinksData } from "./Header.data";
 import useScrollSpy from "../../hooks/useScrollSpy";
-import { onScrollSection } from "../../helpers/helpers";
+import { onScrollSection, scrollToSectionHandler } from "../../helpers/helpers";
 
 const Header: FunctionComponent = (): ReactElement => {
   const [mobileMenuActive, setMobileMenuActive] = useState(false);
@@ -26,10 +26,7 @@ const Header: FunctionComponent = (): ReactElement => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", changeNavBg);
-    return () => {
-      window.removeEventListener("scroll", changeNavBg);
-    };
+    scrollToSectionHandler(changeNavBg);
   }, []);
 
   return (

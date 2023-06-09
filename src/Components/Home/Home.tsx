@@ -9,8 +9,9 @@ import { ArrowDownIcon } from "../../assets/index";
 import { headingWordsGroup, subHeadingWordsGroup } from "./Home.data";
 import { HomeProps } from "./Home.type";
 import useTypingEffect from "../../hooks/useTypingEffect";
+import { onScrollSection, scrollToSectionHandler } from "../../helpers/helpers";
 
-const Home: FunctionComponent<HomeProps> = ({ sectionRef }): ReactElement => {
+const Home: FunctionComponent<HomeProps> = (): ReactElement => {
   const typingHeading = useTypingEffect(headingWordsGroup);
 
   const [minHeight, setMinHeight] = useState(false);
@@ -21,10 +22,7 @@ const Home: FunctionComponent<HomeProps> = ({ sectionRef }): ReactElement => {
   const handleScroll = () => setOffset(window.pageYOffset - 5);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    scrollToSectionHandler(handleScroll);
   }, []);
 
   useEffect(() => {
@@ -37,17 +35,10 @@ const Home: FunctionComponent<HomeProps> = ({ sectionRef }): ReactElement => {
 
   setTimeout(() => {
     setShowSubHeading(true);
+    setTimeout(() => {
+      setShowArrow(true);
+    }, 1000);
   }, 3000);
-
-  setTimeout(() => {
-    setShowArrow(true);
-  }, 4000);
-
-  function handleBackClick() {
-    if (sectionRef.current) {
-      sectionRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }
 
   return (
     <Section
@@ -56,14 +47,14 @@ const Home: FunctionComponent<HomeProps> = ({ sectionRef }): ReactElement => {
     >
       <>
         <div className="min-h-[300px] sm:min-h-[210px]">
-          <h1 className="max-w-[300px] sm:max-w-[100%] self-start text-7xl lg:text-8xl xl:text-9xl font-bold text-stone-400 mb-5 leading-tight md:whitespace-nowrap">
+          <h1 className="max-w-[250px] sm:max-w-[100%] self-start text-6xl lg:text-8xl xl:text-9xl font-bold text-stone-400 mb-5 leading-tight md:whitespace-nowrap">
             {typingHeading}
           </h1>
           <div className={showSubHeading ? "block" : "hidden"}>
             <h2
               className={
                 showSubHeading
-                  ? "fade text-rose-500 text-xl sm:text-4xl xl:text-5xl float-left sm:float-right tracking-[6px] lg:tracking-[10px]"
+                  ? "fade text-rose-500 text-xl sm:text-4xl xl:text-5xl float-left sm:float-right tracking-[4px] lg:tracking-[10px] whitespace-nowrap"
                   : ""
               }
             >
@@ -73,16 +64,15 @@ const Home: FunctionComponent<HomeProps> = ({ sectionRef }): ReactElement => {
         </div>
 
         {showArrow && (
-          <button
-            className={minHeight ? "fade pointer" : "hidden"}
-            onClick={handleBackClick}
-          >
+          <a href="#technologies" onClick={(e) => onScrollSection(e)}>
             <ArrowDownIcon
-              className="animate-bounce absolute bottom-3 left-[50%] translate-x-[-50%]"
+              className={`${
+                minHeight ? "fade pointer" : "hidden"
+              } animate-bounce absolute bottom-3 left-[50%] translate-x-[-50%]`}
               width={50}
               height={50}
             />
-          </button>
+          </a>
         )}
       </>
     </Section>
