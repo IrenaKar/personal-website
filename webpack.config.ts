@@ -3,6 +3,7 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const copyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: prod ? 'production' : 'development',
@@ -56,5 +57,8 @@ module.exports = {
       template: './public/index.html',
     }),
     new MiniCssExtractPlugin(),
+    new copyWebpackPlugin({
+      patterns: [{from: './public/manifest.json', to: 'manifest.json', toType: 'file'}]
+    })
   ],
 };
