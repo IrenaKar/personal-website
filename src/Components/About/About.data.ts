@@ -4,8 +4,8 @@ export const personalData = {
   I love the challenges that frontend development presents and the opportunity to constantly explore and push the boundaries of what is possible.
   Let's collaborate as I leverage my unique personality, experiences and knowledge to create innovative and impactful web solutions. Together, let's forge a path towards excellence in frontend development.`,
   professionalBiography: {
-    description: `<b>My journey as a frontend developer</b> began when I enrolled in a web development academy. Since then, I've successfully completed two additional courses for React and Typescript and also participated in numerous projects, applying the practical skills I acquired during my training.
-    In addition to my frontend expertise, I bring valuable experience from other administrative works in the past. Over the years, I have honed my skills, becoming a diligent, hardworking, and professional employee. <br/><br/>Feel free to explore a few highlights from my previous work experiences:`,
+    description: `My journey as a frontend developer began when I enrolled in a web development academy. Since then, I've successfully completed two additional courses for React and Typescript and also participated in numerous projects, applying the practical skills I acquired during my training.
+    In addition to my frontend expertise, I bring valuable experience from other administrative works in the past. Over the years, I have honed my skills, becoming a diligent, hardworking, and professional employee.`,
     roles: [
       {
         company: "goodcarbon, Berlin",
@@ -28,7 +28,7 @@ export const personalData = {
         role: "Loan officer and Debt collector"
       },
       {
-        company: "Initiative for independent cultural activism INCA, Struga",
+        company: "INCA Cultural Organisation, Struga",
         date: "May 2014 - October 2019",
         role: "Financial Manager"
       }
