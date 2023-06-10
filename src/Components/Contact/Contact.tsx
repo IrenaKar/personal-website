@@ -9,10 +9,10 @@ const Contact: FunctionComponent = (): ReactElement => {
   return (
     <Section
       id="contact"
-      className=" bg-white flex flex-col sm:flex-row gap-5 items-center"
+      className="flex flex-col sm:flex-row gap-10 md:gap-5 items-center mb-20"
     >
       <>
-        <div className="text-stone-600 mr-auto sm:w-[50%] lg:w-[40%] flex flex-col sm:gap-5">
+        <div className="text-gray-600 mr-auto sm:w-[50%] lg:w-[40%] flex flex-col sm:gap-5">
           <div className="text-2xl lg:text-3xl xl:text-4xl leading-snug mb-5">
             <span className="font-bold">
               {"I am super exited to talk in details about my projects"}
@@ -23,10 +23,7 @@ const Contact: FunctionComponent = (): ReactElement => {
             {
               " Write me a message in order to arrange a meeting or find me on my "
             }
-            <a
-              className="underline underline-offset-2 font-bold"
-              href={personalData.linkedIn}
-            >
+            <a className="font-bold" href={personalData.linkedIn}>
               {"LinkedIn"}
             </a>{" "}
             {"profile."}
@@ -39,10 +36,10 @@ const Contact: FunctionComponent = (): ReactElement => {
           onSubmit={(e) => sendEmail(e, formRef)}
         >
           <div className="flex flex-col gap-1">
-            <label className="text-stone-600 text-sm">{"Subject"}</label>
+            <label className="text-gray-600 text-sm">{"Subject"}</label>
             <input
               placeholder="Write your subject"
-              className="py-1 outline-stone-200 text-sm bg-stone-100 p-2 text-stone-400 h-[40px] rounded"
+              className="py-1 outline-gray-300 text-sm bg-gray-200 p-2 text-gray-400 h-[40px] rounded"
               type="text"
               name="subject"
               required
@@ -50,10 +47,10 @@ const Contact: FunctionComponent = (): ReactElement => {
           </div>
 
           <div className="flex flex-col gap-1">
-            <label className="text-stone-600 text-sm">{"Message"}</label>
+            <label className="text-gray-600 text-sm">{"Message"}</label>
             <textarea
               placeholder="Write your message"
-              className="outline-stone-200 text-sm bg-stone-100 p-2 text-stone-400"
+              className="outline-gray-300 text-sm bg-gray-200 p-2 text-gray-400"
               name="message"
               rows={4}
               cols={50}
@@ -63,10 +60,10 @@ const Contact: FunctionComponent = (): ReactElement => {
 
           <div className="flex flex-row items-end gap-5">
             <div className="flex flex-col gap-1 w-[70%]">
-              <label className="text-stone-600 text-sm">{"Your email"}</label>
+              <label className="text-gray-600 text-sm">{"Email"}</label>
               <input
                 placeholder="Write your email address"
-                className="py-1 outline-stone-200 text-sm bg-stone-100 p-2 text-stone-400 h-[40px] rounded"
+                className="py-1 outline-gray-300 text-sm bg-gray-200 p-2 text-gray-400 h-[40px] rounded"
                 type="email"
                 name="email"
                 required
@@ -74,7 +71,7 @@ const Contact: FunctionComponent = (): ReactElement => {
             </div>
             <div className="w-[30%]">
               <input
-                className="bg-rose-500 hover:bg-rose-600 cursor-pointer text-stone-100 py-1 w-full h-[40px] rounded"
+                className="bg-orange-600 hover:bg-orange-700 cursor-pointer text-stone-100 py-1 w-full h-[40px] rounded"
                 type="submit"
                 value="Send"
                 required
