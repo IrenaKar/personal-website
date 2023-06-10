@@ -4,7 +4,7 @@ import React, {
   FunctionComponent,
   ReactElement
 } from "react";
-import BurgerMenu from "../BurgerMenu/BurgerMenu";
+import BurgerMenu from "../BurgerIcon/BurgerIcon";
 import { navigationLinksData } from "./Header.data";
 import useScrollSpy from "../../hooks/useScrollSpy";
 import { onScrollSection, scrollToSectionHandler } from "../../helpers/helpers";

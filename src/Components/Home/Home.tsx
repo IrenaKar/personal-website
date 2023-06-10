@@ -68,7 +68,7 @@ const Home: FunctionComponent<HomeProps> = (): ReactElement => {
             <ArrowDownIcon
               className={`${
                 minHeight ? "fade pointer" : "hidden"
-              } animate-bounce absolute bottom-20 left-[50%] translate-x-[-50%]`}
+              } animate-bounce absolute bottom-10 md:bottom-20 left-[50%] translate-x-[-50%]`}
               width={40}
               height={40}
             />
