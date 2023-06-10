@@ -54,10 +54,15 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
+      favicon: "./public/favicon.ico",
+      previewImage: "/public/website.png",
+      filename: "index.html",
     }),
     new MiniCssExtractPlugin(),
     new copyWebpackPlugin({
-      patterns: [{from: './public/manifest.json', to: 'manifest.json', toType: 'file'}]
+      patterns: [
+        { from: './public/website.png', to: 'website.png' },
+      ],
     })
   ],
 };
