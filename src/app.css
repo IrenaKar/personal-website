@@ -22,7 +22,7 @@
 
 body {
   font-family: inter, sans-serif;
-  background: #fafaf9;
+  background: #f9fafb;
 }
 
 li a::after {
@@ -32,7 +32,7 @@ li a::after {
   display: block;
   height: 2px;
   position: absolute;
-  background: #f43f5e;
+  background: #ea580c;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }

@@ -15,8 +15,8 @@ const App = () => {
     <>
       <Header />
       <Home sectionRef={sectionRef} />
-      <Technologies sectionRef={sectionRef} />
-      <About />
+      <About sectionRef={sectionRef} />
+      <Technologies />
       <Projects />
       <Contact />
     </>

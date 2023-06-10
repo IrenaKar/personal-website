@@ -47,14 +47,14 @@ const Home: FunctionComponent<HomeProps> = (): ReactElement => {
     >
       <>
         <div className="min-h-[300px] sm:min-h-[210px]">
-          <h1 className="max-w-[250px] sm:max-w-[100%] self-start text-6xl lg:text-8xl xl:text-9xl font-bold text-stone-400 mb-5 leading-tight md:whitespace-nowrap">
+          <h1 className="max-w-[270px] sm:max-w-[100%] self-start text-6xl lg:text-8xl xl:text-9xl font-bold text-gray-600 mb-5 leading-tight md:whitespace-nowrap">
             {typingHeading}
           </h1>
           <div className={showSubHeading ? "block" : "hidden"}>
             <h2
               className={
                 showSubHeading
-                  ? "fade text-rose-500 text-xl sm:text-4xl xl:text-5xl float-left sm:float-right tracking-[4px] lg:tracking-[10px] whitespace-nowrap"
+                  ? "fade text-orange-600 text-xl lg:text-5xl float-left sm:float-right tracking-[4px] lg:tracking-[10px] whitespace-nowrap"
                   : ""
               }
             >
@@ -64,13 +64,13 @@ const Home: FunctionComponent<HomeProps> = (): ReactElement => {
         </div>
 
         {showArrow && (
-          <a href="#technologies" onClick={(e) => onScrollSection(e)}>
+          <a href="#about-me" onClick={(e) => onScrollSection(e)}>
             <ArrowDownIcon
               className={`${
                 minHeight ? "fade pointer" : "hidden"
-              } animate-bounce absolute bottom-3 left-[50%] translate-x-[-50%]`}
-              width={50}
-              height={50}
+              } animate-bounce absolute bottom-20 left-[50%] translate-x-[-50%]`}
+              width={40}
+              height={40}
             />
           </a>
         )}
