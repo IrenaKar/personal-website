@@ -9,7 +9,7 @@ const Contact: FunctionComponent = (): ReactElement => {
   return (
     <Section
       id="contact"
-      className="flex flex-col sm:flex-row gap-10 md:gap-5 items-center mb-20"
+      className="flex flex-col sm:flex-row gap-10 md:gap-5 items-center sm:mb-20"
     >
       <>
         <div className="text-gray-600 mr-auto sm:w-[50%] lg:w-[40%] flex flex-col sm:gap-5">
