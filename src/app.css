@@ -3,8 +3,12 @@
 @import "tailwindcss/utilities";
 
 @font-face {
-  font-family: "Inter";
-  src: url("/public/Inter/static/Inter-Regular.ttf") format("woff2");
+  font-family: "Inter", sans-serif;
+  src: url("/public/Inter/Inter-Regular.woff2") format("woff2"),
+    url("/public/Inter/Inter-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @keyframes fade-in {
@@ -17,7 +21,7 @@
 }
 
 body {
-  font-family: inter;
+  font-family: inter, sans-serif;
   background: #fafaf9;
 }
 
