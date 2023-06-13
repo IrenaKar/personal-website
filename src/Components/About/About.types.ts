@@ -1,9 +1,9 @@
 import { RefObject } from "react";
 
 export interface Roles {
-  company: "goodcarbon, Berlin";
-  date: "December 2022 - ";
-  role: "Frontend Developer";
+  company: string;
+  date: string;
+  role: string;
 }
 
 export interface AboutProps {

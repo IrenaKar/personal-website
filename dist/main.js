@@ -1008,8 +1008,8 @@ video {
 .relative {
   position: relative;
 }
-.bottom-20 {
-  bottom: 5rem;
+.bottom-10 {
+  bottom: 2.5rem;
 }
 .left-0 {
   left: 0px;
@@ -1031,9 +1031,6 @@ video {
 }
 .mb-2 {
   margin-bottom: 0.5rem;
-}
-.mb-20 {
-  margin-bottom: 5rem;
 }
 .mb-3 {
   margin-bottom: 0.75rem;
@@ -1113,8 +1110,8 @@ video {
 .min-h-\\[100vh\\] {
   min-height: 100vh;
 }
-.min-h-\\[300px\\] {
-  min-height: 300px;
+.min-h-\\[250px\\] {
+  min-height: 250px;
 }
 .w-8 {
   width: 2rem;
@@ -1242,6 +1239,9 @@ video {
 .gap-8 {
   gap: 2rem;
 }
+.gap-\\[60px\\] {
+  gap: 60px;
+}
 .self-start {
   align-self: flex-start;
 }
@@ -1267,10 +1267,6 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
 }
-.border-stone-400 {
-  --tw-border-opacity: 1;
-  border-color: rgb(168 162 158 / var(--tw-border-opacity));
-}
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -1290,10 +1286,6 @@ video {
 .bg-orange-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(234 88 12 / var(--tw-bg-opacity));
-}
-.bg-stone-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(168 162 158 / var(--tw-bg-opacity));
 }
 .bg-stone-50 {
   --tw-bg-opacity: 1;
@@ -1342,9 +1334,6 @@ video {
 }
 .pl-3 {
   padding-left: 0.75rem;
-}
-.pl-4 {
-  padding-left: 1rem;
 }
 .pt-5 {
   padding-top: 1.25rem;
@@ -1486,6 +1475,10 @@ a:hover::after {
     float: right;
   }
 
+  .sm\\:mb-20 {
+    margin-bottom: 5rem;
+  }
+
   .sm\\:ml-auto {
     margin-left: auto;
   }
@@ -1543,9 +1536,17 @@ a:hover::after {
 
 @media (min-width: 768px) {
 
+  .md\\:bottom-20 {
+    bottom: 5rem;
+  }
+
   .md\\:mx-auto {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .md\\:ml-\\[250px\\] {
+    margin-left: 250px;
   }
 
   .md\\:mt-0 {
@@ -1597,6 +1598,10 @@ a:hover::after {
     width: 40%;
   }
 
+  .lg\\:w-\\[550px\\] {
+    width: 550px;
+  }
+
   .lg\\:px-40 {
     padding-left: 10rem;
     padding-right: 10rem;
@@ -1624,6 +1629,10 @@ a:hover::after {
 
 @media (min-width: 1280px) {
 
+  .xl\\:ml-0 {
+    margin-left: 0px;
+  }
+
   .xl\\:mr-5 {
     margin-right: 1.25rem;
   }
@@ -1648,6 +1657,10 @@ a:hover::after {
     gap: 0.25rem;
   }
 
+  .xl\\:gap-\\[60px\\] {
+    gap: 60px;
+  }
+
   .xl\\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -1658,7 +1671,7 @@ a:hover::after {
     line-height: 1;
   }
 }
-`, "",{"version":3,"sources":["webpack://./src/app.css","<no source>"],"names":[],"mappings":"AAAA;;CAA0B,CAA1B;;;CAA0B;;AAA1B;;;EAAA,sBAA0B,EAA1B,MAA0B;EAA1B,eAA0B,EAA1B,MAA0B;EAA1B,mBAA0B,EAA1B,MAA0B;EAA1B,qBAA0B,EAA1B,MAA0B;AAAA;;AAA1B;;EAAA,gBAA0B;AAAA;;AAA1B;;;;;;;CAA0B;;AAA1B;EAAA,gBAA0B,EAA1B,MAA0B;EAA1B,8BAA0B,EAA1B,MAA0B;EAA1B,gBAA0B,EAA1B,MAA0B;EAA1B,cAA0B;KAA1B,WAA0B,EAA1B,MAA0B;EAA1B,4NAA0B,EAA1B,MAA0B;EAA1B,6BAA0B,EAA1B,MAA0B;EAA1B,+BAA0B,EAA1B,MAA0B;AAAA;;AAA1B;;;CAA0B;;AAA1B;EAAA,SAA0B,EAA1B,MAA0B;EAA1B,oBAA0B,EAA1B,MAA0B;AAAA;;AAA1B;;;;CAA0B;;AAA1B;EAAA,SAA0B,EAA1B,MAA0B;EAA1B,cAA0B,EAA1B,MAA0B;EAA1B,qBAA0B,EAA1B,MAA0B;AAAA;;AAA1B;;CAA0B;;AAA1B;EAAA,yCAA0B;UAA1B,iCAA0B;AAAA;;AAA1B;;CAA0B;;AAA1B;;;;;;EAAA,kBAA0B;EAA1B,oBAA0B;AAAA;;AAA1B;;CAA0B;;AAA1B;EAAA,cAA0B;EAA1B,wBAA0B;AAAA;;AAA1B;;CAA0B;;AAA1B;;EAAA,mBAA0B;AAAA;;AAA1B;;;CAA0B;;AAA1B;;;;EAAA,+GAA0B,EAA1B,MAA0B;EAA1B,cAA0B,EAA1B,MAA0B;AAAA;;AAA1B;;CAA0B;;AAA1B;EAAA,cAA0B;AAAA;;AAA1B;;CAA0B;;AAA1B;;EAAA,cAA0B;EAA1B,cAA0B;EAA1B,kBAA0B;EAA1B,wBAA0B;AAAA;;AAA1B;EAAA,eAA0B;AAAA;;AAA1B;EAAA,WAA0B;AAAA;;AAA1B;;;;CAA0B;;AAA1B;EAAA,cAA0B,EAA1B,MAA0B;EAA1B,qBAA0B,EAA1B,MAA0B;EAA1B,yBAA0B,EAA1B,MAA0B;AAAA;;AAA1B;;;;CAA0B;;AAA1B;;;;;EAAA,oBAA0B,EAA1B,MAA0B;EAA1B,eAA0B,EAA1B,MAA0B;EAA1B,oBAA0B,EAA1B,MAA0B;EAA1B,oBAA0B,EAA1B,MAA0B;EAA1B,cAA0B,EAA1B,MAA0B;EAA1B,SAA0B,EAA1B,MAA0B;EAA1B,UAA0B,EAA1B,MAA0B;AAAA;;AAA1B;;CAA0B;;AAA1B;;EAAA,oBAA0B;AAAA;;AAA1B;;;CAA0B;;AAA1B;;;;EAAA,0BAA0B,EAA1B,MAA0B;EAA1B,6BAA0B,EAA1B,MAA0B;EAA1B,sBAA0B,EAA1B,MAA0B;AAAA;;AAA1B;;CAA0B;;AAA1B;EAAA,aAA0B;AAAA;;AAA1B;;CAA0B;;AAA1B;EAAA,gBAA0B;AAAA;;AAA1B;;CAA0B;;AAA1B;EAAA,wBAA0B;AAAA;;AAA1B;;CAA0B;;AAA1B;;EAAA,YAA0B;AAAA;;AAA1B;;;CAA0B;;AAA1B;EAAA,6BAA0B,EAA1B,MAA0B;EAA1B,oBAA0B,EAA1B,MAA0B;AAAA;;AAA1B;;CAA0B;;AAA1B;EAAA,wBAA0B;AAAA;;AAA1B;;;CAA0B;;AAA1B;EAAA,0BAA0B,EAA1B,MAA0B;EAA1B,aAA0B,EAA1B,MAA0B;AAAA;;AAA1B;;CAA0B;;AAA1B;EAAA,kBAA0B;AAAA;;AAA1B;;CAA0B;;AAA1B;;;;;;;;;;;;;EAAA,SAA0B;AAAA;;AAA1B;EAAA,SAA0B;EAA1B,UAA0B;AAAA;;AAA1B;EAAA,UAA0B;AAAA;;AAA1B;;;EAAA,gBAA0B;EAA1B,SAA0B;EAA1B,UAA0B;AAAA;;AAA1B;;CAA0B;;AAA1B;EAAA,gBAA0B;AAAA;;AAA1B;;;CAA0B;;AAA1B;EAAA,UAA0B,EAA1B,MAA0B;EAA1B,cAA0B,EAA1B,MAA0B;AAAA;;AAA1B;;EAAA,UAA0B,EAA1B,MAA0B;EAA1B,cAA0B,EAA1B,MAA0B;AAAA;;AAA1B;;CAA0B;;AAA1B;;EAAA,eAA0B;AAAA;;AAA1B;;CAA0B;AAA1B;EAAA,eAA0B;AAAA;;AAA1B;;;;CAA0B;;AAA1B;;;;;;;;EAAA,cAA0B,EAA1B,MAA0B;EAA1B,sBAA0B,EAA1B,MAA0B;AAAA;;AAA1B;;CAA0B;;AAA1B;;EAAA,eAA0B;EAA1B,YAA0B;AAAA;;AAA1B,wEAA0B;AAA1B;EAAA,aAA0B;AAAA;;AAA1B;EAAA,wBAA0B;EAA1B,wBAA0B;EAA1B,mBAA0B;EAA1B,mBAA0B;EAA1B,cAA0B;EAA1B,cAA0B;EAA1B,cAA0B;EAA1B,eAA0B;EAA1B,eAA0B;EAA1B,aAA0B;EAA1B,aAA0B;EAA1B,kBAA0B;EAA1B,sCAA0B;EAA1B,8BAA0B;EAA1B,6BAA0B;EAA1B,4BAA0B;EAA1B,eAA0B;EAA1B,oBAA0B;EAA1B,sBAA0B;EAA1B,uBAA0B;EAA1B,wBAA0B;EAA1B,kBAA0B;EAA1B,2BAA0B;EAA1B,4BAA0B;EAA1B,sCAA0B;EAA1B,kCAA0B;EAA1B,2BAA0B;EAA1B,sBAA0B;EAA1B,8BAA0B;EAA1B,YAA0B;EAA1B,kBAA0B;EAA1B,gBAA0B;EAA1B,iBAA0B;EAA1B,kBAA0B;EAA1B,cAA0B;EAA1B,gBAA0B;EAA1B,aAA0B;EAA1B,mBAA0B;EAA1B,qBAA0B;EAA1B,2BAA0B;EAA1B,yBAA0B;EAA1B,0BAA0B;EAA1B,2BAA0B;EAA1B,uBAA0B;EAA1B,wBAA0B;EAA1B,yBAA0B;EAA1B;AAA0B;;AAA1B;EAAA,wBAA0B;EAA1B,wBAA0B;EAA1B,mBAA0B;EAA1B,mBAA0B;EAA1B,cAA0B;EAA1B,cAA0B;EAA1B,cAA0B;EAA1B,eAA0B;EAA1B,eAA0B;EAA1B,aAA0B;EAA1B,aAA0B;EAA1B,kBAA0B;EAA1B,sCAA0B;EAA1B,8BAA0B;EAA1B,6BAA0B;EAA1B,4BAA0B;EAA1B,eAA0B;EAA1B,oBAA0B;EAA1B,sBAA0B;EAA1B,uBAA0B;EAA1B,wBAA0B;EAA1B,kBAA0B;EAA1B,2BAA0B;EAA1B,4BAA0B;EAA1B,sCAA0B;EAA1B,kCAA0B;EAA1B,2BAA0B;EAA1B,sBAA0B;EAA1B,8BAA0B;EAA1B,YAA0B;EAA1B,kBAA0B;EAA1B,gBAA0B;EAA1B,iBAA0B;EAA1B,kBAA0B;EAA1B,cAA0B;EAA1B,gBAA0B;EAA1B,aAA0B;EAA1B,mBAA0B;EAA1B,qBAA0B;EAA1B,2BAA0B;EAA1B,yBAA0B;EAA1B,0BAA0B;EAA1B,2BAA0B;EAA1B,uBAA0B;EAA1B,wBAA0B;EAA1B,yBAA0B;EAA1B;AAA0B;AAC1B;EAAA;AAAgC;AAAhC;;EAAA;IAAA;EAAgC;AAAA;AAAhC;;EAAA;IAAA;EAAgC;AAAA;AAAhC;;EAAA;IAAA;EAAgC;AAAA;AAAhC;;EAAA;IAAA;EAAgC;AAAA;AAAhC;;EAAA;IAAA;EAAgC;AAAA;AAChC;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA,uBAA+B;EAA/B;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA,sBAA+B;EAA/B;AAA+B;AAA/B;EAAA,mBAA+B;EAA/B;AAA+B;AAA/B;EAAA,iBAA+B;EAA/B;AAA+B;AAA/B;EAAA,mBAA+B;EAA/B;AAA+B;AAA/B;EAAA,kBAA+B;EAA/B;AAA+B;AAA/B;;EAAA;IAAA,2BAA+B;IAA/B;EAA+B;;EAA/B;IAAA,eAA+B;IAA/B;EAA+B;AAAA;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA,sBAA+B;EAA/B;AAA+B;AAA/B;EAAA,sBAA+B;EAA/B;AAA+B;AAA/B;EAAA,kBAA+B;EAA/B;AAA+B;AAA/B;EAAA,kBAA+B;EAA/B;AAA+B;AAA/B;EAAA,kBAA+B;EAA/B;AAA+B;AAA/B;EAAA,kBAA+B;EAA/B;AAA+B;AAA/B;EAAA,kBAA+B;EAA/B;AAA+B;AAA/B;EAAA,kBAA+B;EAA/B;AAA+B;AAA/B;EAAA,kBAA+B;EAA/B;AAA+B;AAA/B;EAAA,kBAA+B;EAA/B;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA,qBAA+B;EAA/B;AAA+B;AAA/B;EAAA,oBAA+B;EAA/B;AAA+B;AAA/B;EAAA,mBAA+B;EAA/B;AAA+B;AAA/B;EAAA,iBAA+B;EAA/B;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA,iBAA+B;EAA/B;AAA+B;AAA/B;EAAA,kBAA+B;EAA/B;AAA+B;AAA/B;EAAA,kBAA+B;EAA/B;AAA+B;AAA/B;EAAA,mBAA+B;EAA/B;AAA+B;AAA/B;EAAA,mBAA+B;EAA/B;AAA+B;AAA/B;EAAA,kBAA+B;EAA/B;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA,oBAA+B;EAA/B;AAA+B;AAA/B;EAAA,oBAA+B;EAA/B;AAA+B;AAA/B;EAAA,oBAA+B;EAA/B;AAA+B;AAA/B;EAAA,oBAA+B;EAA/B;AAA+B;AAA/B;EAAA,oBAA+B;EAA/B;AAA+B;AAA/B;EAAA,oBAA+B;EAA/B;AAA+B;AAA/B;EAAA;AAA+B;AAA/B;EAAA,0EAA+B;EAA/B,8FAA+B;EAA/B;AAA+B;AAA/B;EAAA,6EAA+B;EAA/B,iGAA+B;EAA/B;AAA+B;AAA/B;EAAA;AAA+B;AA2C7B;IACE,iCAAiC;EACnC;;AA3CF;EACE,gCAAgC;EAChC;0DACwD;EACxD,mBAAmB;EACnB,kBAAkB;EAClB,kBAAkB;AACpB;;AAEA;EACE;IACE,UAAU;EACZ;EACA;IACE,UAAU;EACZ;AACF;;AAEA;EACE,8BAA8B;EAC9B,mBAAmB;AACrB;;AAEA;EACE,8CAA8C;EAC9C,SAAS;EACT,WAAW;EACX,cAAc;EACd,WAAW;EACX,kBAAkB;EAClB,mBAAmB;EACnB,iDAAiD;EACjD,QAAQ;AACV;;AAEA;EACE,WAAW;EACX,OAAO;AACT;;AA1CA;EAAA,mBCAA;EDAA;CCAA;;ADAA;;EAAA;IAAA;GCAA;;EDAA;IAAA;GCAA;;EDAA;IAAA;GCAA;;EDAA;IAAA;GCAA;;EDAA;IAAA;GCAA;;EDAA;IAAA,wBCAA;IDAA;GCAA;;EDAA;IAAA;GCAA;;EDAA;IAAA;GCAA;;EDAA;IAAA;GCAA;;EDAA;IAAA;GCAA;;EDAA;IAAA;GCAA;;EDAA;IAAA;GCAA;;EDAA;IAAA;GCAA;;EDAA;IAAA,gBCAA;IDAA;GCAA;CAAA;;ADAA;;EAAA;IAAA,kBCAA;IDAA;GCAA;;EDAA;IAAA;GCAA;;EDAA;IAAA;GCAA;;EDAA;IAAA;GCAA;;EDAA;IAAA,yBCAA;IDAA;GCAA;;EDAA;IAAA;GCAA;;EDAA;IAAA;GCAA;;EDAA;IAAA;GCAA;;EDAA;IAAA;GCAA;;EDAA;IAAA,mBCAA;IDAA;GCAA;;EDAA;IAAA;GCAA;CAAA;;ADAA;;EAAA;IAAA;GCAA;;EDAA;IAAA,oBCAA;IDAA;GCAA;;EDAA;IAAA,oBCAA;IDAA;GCAA;;EDAA;IAAA,gBCAA;IDAA;GCAA;;EDAA;IAAA,gBCAA;IDAA;GCAA;;EDAA;IAAA;GCAA;CAAA;;ADAA;;EAAA;IAAA;GCAA;;EDAA;IAAA;GCAA;;EDAA;IAAA;GCAA;;EDAA;IAAA;GCAA;;EDAA;IAAA;GCAA;;EDAA;IAAA;GCAA;;EDAA;IAAA,mBCAA;IDAA;GCAA;;EDAA;IAAA,gBCAA;IDAA;GCAA;CAAA","sourcesContent":["@import \"tailwindcss/base\";\r\n@import \"tailwindcss/components\";\r\n@import \"tailwindcss/utilities\";\r\n\r\n@font-face {\r\n  font-family: \"Inter\", sans-serif;\r\n  src: url(\"/public/Inter/Inter-Regular.woff2\") format(\"woff2\"),\r\n    url(\"/public/Inter/Inter-Regular.woff\") format(\"woff\");\r\n  font-weight: normal;\r\n  font-style: normal;\r\n  font-display: swap;\r\n}\r\n\r\n@keyframes fade-in {\r\n  0% {\r\n    opacity: 0;\r\n  }\r\n  100% {\r\n    opacity: 1;\r\n  }\r\n}\r\n\r\nbody {\r\n  font-family: inter, sans-serif;\r\n  background: #f9fafb;\r\n}\r\n\r\nli a::after {\r\n  background: none repeat scroll 0 0 transparent;\r\n  bottom: 0;\r\n  content: \"\";\r\n  display: block;\r\n  height: 2px;\r\n  position: absolute;\r\n  background: #ea580c;\r\n  transition: width 0.3s ease 0s, left 0.3s ease 0s;\r\n  width: 0;\r\n}\r\n\r\na:hover::after {\r\n  width: 100%;\r\n  left: 0;\r\n}\r\n\r\n@layer utilities {\r\n  .fade {\r\n    animation: fade-in 2s ease-in-out;\r\n  }\r\n}\r\n",null],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/app.css","<no source>"],"names":[],"mappings":"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","sourcesContent":["@import \"tailwindcss/base\";\r\n@import \"tailwindcss/components\";\r\n@import \"tailwindcss/utilities\";\r\n\r\n@font-face {\r\n  font-family: \"Inter\", sans-serif;\r\n  src: url(\"/public/Inter/Inter-Regular.woff2\") format(\"woff2\"),\r\n    url(\"/public/Inter/Inter-Regular.woff\") format(\"woff\");\r\n  font-weight: normal;\r\n  font-style: normal;\r\n  font-display: swap;\r\n}\r\n\r\n@keyframes fade-in {\r\n  0% {\r\n    opacity: 0;\r\n  }\r\n  100% {\r\n    opacity: 1;\r\n  }\r\n}\r\n\r\nbody {\r\n  font-family: inter, sans-serif;\r\n  background: #f9fafb;\r\n}\r\n\r\nli a::after {\r\n  background: none repeat scroll 0 0 transparent;\r\n  bottom: 0;\r\n  content: \"\";\r\n  display: block;\r\n  height: 2px;\r\n  position: absolute;\r\n  background: #ea580c;\r\n  transition: width 0.3s ease 0s, left 0.3s ease 0s;\r\n  width: 0;\r\n}\r\n\r\na:hover::after {\r\n  width: 100%;\r\n  left: 0;\r\n}\r\n\r\n@layer utilities {\r\n  .fade {\r\n    animation: fade-in 2s ease-in-out;\r\n  }\r\n}\r\n",null],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -35974,10 +35987,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   personalData: () => (/* binding */ personalData)
 /* harmony export */ });
 const personalData = {
-    personalBiography: `<b>A frontend developer based in dynamic Berlin.</b> While my professional journey has taken me through various fields, it is in frontend development that I have discovered my true passion and purpose.
-  Coming from a diverse professional background, including financial management and accounting, I found myself most fulfilled when I started writing lines of code and bringing designs to life. 
-  I love the challenges that frontend development presents and the opportunity to constantly explore and push the boundaries of what is possible.
-  Let's collaborate as I leverage my unique personality, experiences and knowledge to create innovative and impactful web solutions. Together, let's forge a path towards excellence in frontend development.`,
+    personalBiography: `<b>Berlin based promising frontend developer!</b> While my professional journey has taken me through various fields, I have discovered my true passion and purpose in frontend development.
+  Coming from a diverse professional background, including financial management, accounting and human resources, I found myself most fulfilled when I started writing lines of code and bringing designs to life. 
+  I love the challenges that frontend development presents and the opportunity to constantly explore and push the boundaries of what is possible. I’m spending practically my whole day experimenting with a variety of frontend development tools, explore different approaches to solving problems, and improve my ability to create beautiful and user-friendly web interfaces.`,
     professionalBiography: {
         description: `My journey as a frontend developer began when I enrolled in a web development academy. Since then, I've successfully completed two additional courses for React and Typescript and also participated in numerous projects, applying the practical skills I acquired during my training.
     In addition to my frontend expertise, I bring valuable experience from other administrative works in the past. Over the years, I have honed my skills, becoming a diligent, hardworking, and professional employee.`,
@@ -36038,34 +36050,25 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const About = ({ sectionRef }) => {
-    function spliceIntoChunks(arr, chunkSize) {
-        const res = [];
-        while (arr.length > 0) {
-            const chunk = arr.splice(0, chunkSize);
-            res.push(chunk);
-        }
-        return res;
-    }
-    const rolesChunks = spliceIntoChunks(_About_data__WEBPACK_IMPORTED_MODULE_2__.personalData.professionalBiography.roles, 2);
     return (react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_Section_Section__WEBPACK_IMPORTED_MODULE_0__["default"], { sectionRef: sectionRef, id: "about-me", className: "flex flex-col bg-gray-600 text-left" },
         react__WEBPACK_IMPORTED_MODULE_1___default().createElement((react__WEBPACK_IMPORTED_MODULE_1___default().Fragment), null,
             react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", { className: "text-4xl font-bold text-gray-400 mb-[60px]" }, "about me"),
-            react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", { className: "flex flex-col md:flex-row gap-10 mb-20" },
-                react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", { className: "min-w-[190px] w-[190px] h-[190px]" },
-                    react__WEBPACK_IMPORTED_MODULE_1___default().createElement("img", { className: "block w-full", src: (__webpack_require__(/*! ../../assets/otherImages/my-photo.png */ "./src/assets/otherImages/my-photo.png")["default"]), alt: `My photo` })),
-                react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", { className: "w-fit text-sm" },
-                    react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", { className: "mb-5 text-gray-50", dangerouslySetInnerHTML: {
-                            __html: _About_data__WEBPACK_IMPORTED_MODULE_2__.personalData.personalBiography
-                        } }),
-                    react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", { className: "mb-5 text-gray-50", dangerouslySetInnerHTML: {
-                            __html: _About_data__WEBPACK_IMPORTED_MODULE_2__.personalData.professionalBiography.description
-                        } }))),
-            react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", { className: "flex flex-col gap-5" },
-                react__WEBPACK_IMPORTED_MODULE_1___default().createElement("span", { className: "text-gray-400 text-lg font-bold pl-4" }, "experience"),
-                react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", { className: "flex flex-row flex-wrap gap-5 w-full justify-between" }, rolesChunks.map((roleList, index) => (react__WEBPACK_IMPORTED_MODULE_1___default().createElement("ul", { key: index, className: "list-disc pl-3 flex flex-col gap-5" }, roleList.map((roleItem, index) => (react__WEBPACK_IMPORTED_MODULE_1___default().createElement("li", { key: index, className: "mb-3 text-gray-50 text-sm" },
-                    react__WEBPACK_IMPORTED_MODULE_1___default().createElement("span", { className: "font-bold mr-2 block" }, `${roleItem.company}`),
-                    react__WEBPACK_IMPORTED_MODULE_1___default().createElement("span", null, roleItem.role),
-                    react__WEBPACK_IMPORTED_MODULE_1___default().createElement("span", { className: "block" }, roleItem.date))))))))),
+            react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", { className: "flex flex-col xl:flex-row gap-10 xl:gap-[60px]" },
+                react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", { className: "flex flex-col md:flex-row gap-[60px] w-fit" },
+                    react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", { className: "min-w-[190px] w-[190px] h-[190px]" },
+                        react__WEBPACK_IMPORTED_MODULE_1___default().createElement("img", { className: "block w-full", src: (__webpack_require__(/*! ../../assets/otherImages/my-photo.png */ "./src/assets/otherImages/my-photo.png")["default"]), alt: `My photo` })),
+                    react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", { className: "w-fit text-sm" },
+                        react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", { className: "mb-5 text-gray-50", dangerouslySetInnerHTML: {
+                                __html: _About_data__WEBPACK_IMPORTED_MODULE_2__.personalData.personalBiography
+                            } }),
+                        react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", { className: "mb-5 text-gray-50", dangerouslySetInnerHTML: {
+                                __html: _About_data__WEBPACK_IMPORTED_MODULE_2__.personalData.professionalBiography.description
+                            } }))),
+                react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", { className: "flex flex-col gap-5 md:ml-[250px] xl:ml-0 lg:w-[550px]" },
+                    react__WEBPACK_IMPORTED_MODULE_1___default().createElement("ul", { className: "list-disc pl-3 flex flex-col gap-5" }, _About_data__WEBPACK_IMPORTED_MODULE_2__.personalData.professionalBiography.roles.map((roleItem, index) => (react__WEBPACK_IMPORTED_MODULE_1___default().createElement("li", { key: index, className: "mb-3 text-gray-50 text-sm" },
+                        react__WEBPACK_IMPORTED_MODULE_1___default().createElement("span", { className: "font-bold mr-2" }, `${roleItem.company} -`),
+                        react__WEBPACK_IMPORTED_MODULE_1___default().createElement("span", null, roleItem.role),
+                        react__WEBPACK_IMPORTED_MODULE_1___default().createElement("span", { className: "block" }, roleItem.date))))))),
             react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", { className: "flex sm:ml-auto gap-5 mr-5 mt-[60px] text-gray-50" },
                 react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", { className: "flex flex-row gap-2" },
                     react__WEBPACK_IMPORTED_MODULE_1___default().createElement("span", { className: "whitespace-nowrap" }, "Find me on:"),
@@ -36082,9 +36085,9 @@ const About = ({ sectionRef }) => {
 
 /***/ }),
 
-/***/ "./src/Components/BurgerMenu/BurgerMenu.tsx":
+/***/ "./src/Components/BurgerIcon/BurgerIcon.tsx":
 /*!**************************************************!*\
-  !*** ./src/Components/BurgerMenu/BurgerMenu.tsx ***!
+  !*** ./src/Components/BurgerIcon/BurgerIcon.tsx ***!
   \**************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -36098,9 +36101,9 @@ __webpack_require__.r(__webpack_exports__);
 
 const BurgerMenu = ({ onClick }) => {
     return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { onClick: onClick, className: "flex flex-col gap-1 h-4 w-8 mt-5 ml-5 md:hidden fixed left-0" },
-        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", { className: "border-2 bg-stone-400 border-stone-400 w-full rounded" }),
-        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", { className: "border-2 bg-stone-400 border-stone-400 w-full rounded" }),
-        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", { className: "border-2 bg-stone-400 border-stone-400 w-full rounded" })));
+        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", { className: "border-2 bg-gray-400 border-gray-400 w-full rounded" }),
+        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", { className: "border-2 bg-gray-400 border-gray-400 w-full rounded" }),
+        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", { className: "border-2 bg-gray-400 border-gray-400 w-full rounded" })));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BurgerMenu);
 
@@ -36129,7 +36132,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const Contact = () => {
     const formRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Section_Section__WEBPACK_IMPORTED_MODULE_1__["default"], { id: "contact", className: "flex flex-col sm:flex-row gap-10 md:gap-5 items-center mb-20" },
+    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Section_Section__WEBPACK_IMPORTED_MODULE_1__["default"], { id: "contact", className: "flex flex-col sm:flex-row gap-10 md:gap-5 items-center sm:mb-20" },
         react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null,
             react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { className: "text-gray-600 mr-auto sm:w-[50%] lg:w-[40%] flex flex-col sm:gap-5" },
                 react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { className: "text-2xl lg:text-3xl xl:text-4xl leading-snug mb-5" },
@@ -36194,7 +36197,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _BurgerMenu_BurgerMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../BurgerMenu/BurgerMenu */ "./src/Components/BurgerMenu/BurgerMenu.tsx");
+/* harmony import */ var _BurgerIcon_BurgerIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../BurgerIcon/BurgerIcon */ "./src/Components/BurgerIcon/BurgerIcon.tsx");
 /* harmony import */ var _Header_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Header.data */ "./src/Components/Header/Header.data.ts");
 /* harmony import */ var _hooks_useScrollSpy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../hooks/useScrollSpy */ "./src/hooks/useScrollSpy.ts");
 /* harmony import */ var _helpers_helpers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../helpers/helpers */ "./src/helpers/helpers.ts");
@@ -36233,7 +36236,7 @@ const Header = () => {
                         (0,_helpers_helpers__WEBPACK_IMPORTED_MODULE_4__.onScrollSection)(e);
                     } }, navLink === "about-me" ? navLink.replace(/-/g, " ") : navLink)))))),
         !mobileMenuActive && (react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { className: "w-full h-[68px] bg-white z-20 fixed md:hidden" },
-            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_BurgerMenu_BurgerMenu__WEBPACK_IMPORTED_MODULE_1__["default"], { onClick: showBUrgerMenu })))));
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_BurgerIcon_BurgerIcon__WEBPACK_IMPORTED_MODULE_1__["default"], { onClick: showBUrgerMenu })))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Header);
 
@@ -36308,7 +36311,7 @@ const Home = () => {
     }, 3000);
     return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Section_Section__WEBPACK_IMPORTED_MODULE_1__["default"], { id: "home", className: "flex items-center justify-start sm:justify-center min-h-[100vh]" },
         react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null,
-            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { className: "min-h-[300px] sm:min-h-[210px]" },
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { className: "min-h-[250px] sm:min-h-[210px]" },
                 react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", { className: "max-w-[270px] sm:max-w-[100%] self-start text-6xl lg:text-8xl xl:text-9xl font-bold text-gray-600 mb-5 leading-tight md:whitespace-nowrap" }, typingHeading),
                 react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { className: showSubHeading ? "block" : "hidden" },
                     react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", { className: showSubHeading
@@ -36316,7 +36319,7 @@ const Home = () => {
                             : "" },
                         react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, _Home_data__WEBPACK_IMPORTED_MODULE_3__.subHeadingWordsGroup)))),
             showArrow && (react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", { href: "#about-me", onClick: (e) => (0,_helpers_helpers__WEBPACK_IMPORTED_MODULE_5__.onScrollSection)(e) },
-                react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_assets_index__WEBPACK_IMPORTED_MODULE_2__.ArrowDownIcon, { className: `${minHeight ? "fade pointer" : "hidden"} animate-bounce absolute bottom-20 left-[50%] translate-x-[-50%]`, width: 40, height: 40 }))))));
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_assets_index__WEBPACK_IMPORTED_MODULE_2__.ArrowDownIcon, { className: `${minHeight ? "fade pointer" : "hidden"} animate-bounce absolute bottom-10 md:bottom-20 left-[50%] translate-x-[-50%]`, width: 40, height: 40 }))))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);
 
@@ -36404,7 +36407,7 @@ const ProjectCard = ({ title, description, image, resources, projectUrl, github,
                                 react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_assets_index__WEBPACK_IMPORTED_MODULE_1__.GithubIcon, { className: "stroke-gray-500", width: 16, height: 16 }),
                                 react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", { className: "text-gray-500 text-sm font-bold underline-offset-1" }, "view github")))),
                         react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { onClick: showDetailsHandler, className: "flex flex-row gap-5 cursor-pointer xl:mr-5 w-full sm:w-fit justify-between" },
-                            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", { className: "text-sm text-gray-500 font-bold" }, showDetails ? "details" : "view details"),
+                            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", { className: "text-sm text-gray-500 font-bold" }, showDetails ? "hide details" : "view details"),
                             react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_assets_index__WEBPACK_IMPORTED_MODULE_1__.ArrowDownIcon, { className: `${showDetails ? "rotate-180" : "rotate-0"} cursor-pointer`, width: 16, height: 16 })))))),
         showDetails && react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_ProjectCardDetails_ProjectCardDeatils__WEBPACK_IMPORTED_MODULE_2__["default"], { longDescription: longDescription })));
 };
@@ -36428,17 +36431,17 @@ const projectsData = [
     {
         image: "goodcarbon.png",
         title: "Digital investment and trading platform",
-        description: `During my latest role as a junior frontend developer, I had the opportunity to work on an exciting MVP project. Our team was tasked with building a digital investment and trading platform for nature-based climate solutions and the trading of associated carbon credits. The goal of the project was to create a marketplace solution and full checkout flow. To bring this project to life, we utilized a combination of modern technologies. The frontend of the platform was built using <b>React</b>, <b>TypeScript,</b> and <b>Tailwind CSS.</b>`,
-        longDescription: `<p>By focusing on the frontend development aspects of the marketplace solution, the team created an engaging and user-friendly interface for users to explore projects of different financial products, view project details, and make investments. The technical implementation involved dynamic rendering, interactive user interface design, investment workflow, state management, responsive design, and seamless data synchronization between the frontend and backend components of the platform.</p>
+        description: `During my latest role as a junior frontend developer, I had the opportunity to work on an exciting MVP project. Our team was tasked with building a digital investment and trading platform for nature-based climate solutions and trading of carbon credits. The goal of the project was to create a marketplace solution and full checkout flow. To bring this project to life, we utilized a combination of modern technologies. The frontend of the platform was built using <b>React</b>, <b>TypeScript,</b> and <b>Tailwind CSS.</b>`,
+        longDescription: `<p>By focusing on the frontend development aspects of the marketplace, the team created user-friendly interface for users to explore projects of four different financial products, view project details, and make investments. The technical implementation involved dynamic rendering, interactive user interface design, investment workflow, state management, responsive design, and data synchronization between the frontend and backend components of the platform.</p>
     <br/>
     <br/>
     Features:
     <br/>
     <ul style="list-style-type: disc; padding-left: 20px;">
-    <li><b>Marketplace Solution for Multiple Financial Products: </b>This required fetching project data from the backend API and mapping it to the appropriate UI components. The project cards were generated dynamically, allowing for scalability and reusability as new different projects were added to the platform.</li>
-    <li><b>Secure Registration and Login Authentication: </b>To ensure the highest level of security and modularity, this feature was built as a separate microfrontend dedicated only to authentication. The advantages of having authentication as a separate microfrontend is that this modularity allowed for independent development, deployment, and scaling of the authentication microfrontend. Furthermore, it provides reusability, as the same authentication microfrontend could potentially be used in other projects or integrated into different parts of the platform.</li>
-    <li><b>Utilized components from a custom published UI library: </b>By using a custom UI library, the project can ensure a consistent and cohesive design throughout the platform as the library provides pre-designed and pre-styled components that follow a unified visual language. It also ensures consistent code patterns and structure across the application.</li>
-    <li><b>User-Friendly Checkout Flow: </b>The frontend development for this feature leveraged state management libraries like Redux Persist, to manage the application's state. This ensured that data related to the marketplace, project details, and user investments remained synchronized across different components.</li>
+    <li><b>Marketplace Solution for Multiple Financial Products: </b>This feature required fetching projects data from the backend API and mapping them to the appropriate UI components. The project cards were generated dynamically, allowing for scalability and reusability as new different projects were added to the platform.</li>
+    <li><b>Secure Registration and Login Authentication: </b>To ensure the highest level of security, this feature was built as a separate microfrontend dedicated only to authentication. The advantages of having authentication as a separate microfrontend is that this modularity allowed for independent development and deployment of the authentication microfrontend. Furthermore, it provides reusability, as the same authentication microfrontend could potentially be used in other projects or integrated into different parts of the platform.</li>
+    <li><b>Utilized Components from a Custom Published UI Library: </b>By using a custom UI library, the project can ensure a consistent and cohesive design throughout the platform as the library provides pre-designed and pre-styled components that follow a unified visual language. It also ensures consistent code and structure across the application.</li>
+    <li><b>User-Friendly Checkout Flow: </b>The frontend development for this feature included state management libraries like Redux Persist, to manage the application's state. This ensured that data related to the marketplace, project details, and user investments remained synchronized across different components.</li>
     </ul>
     <br/>
     <br/>
@@ -36450,8 +36453,8 @@ const projectsData = [
     <br/>
     <br/>
     <p>Working on this project I not only gained valuable technical learnings but also upgraded my skills in React by working on more complex frontend challenges. The project provided me with experience in working with a microfrontend architecture. As a result, I became proficient in building reusable and modular components, streamlining development processes, and ensuring a consistent user experience across the platform.
-    Integrating with backend APIs and effectively managing data retrieval and synchronization were integral parts of the project, allowing me to deepen my knowledge in these areas. I utilized libraries such as Axios for API communication and state management techniques like Redux and Redux Persist to efficiently manage and share data between components.
-    Moreover, working extensively with TypeScript, I gained a strong understanding of TypeScript's type system, enabling me to catch potential errors during development and improve the overall quality of the codebase.</p>`,
+    Integrating with backend APIs and effectively managing data retrieval and synchronization allowed me to deepen my knowledge in these areas. I utilized libraries such as Axios for API communication and state management techniques like Redux and Redux Persist to efficiently manage and share data between components.
+    Working extensively with TypeScript, I gained a strong understanding of TypeScript's type system, enabling me to catch potential errors during development and improve the overall quality of the codebase.</p>`,
         resources: ["react", "typescript", "tailwind"],
         projectUrl: "https://goodcarbon.earth/",
         github: ""
@@ -36459,7 +36462,7 @@ const projectsData = [
     {
         image: "resourceya-preview.png",
         title: "Education platform",
-        description: `As a fresh frontend developer, I landed on this project through my first job ever as a frontend developer. The project involved building a marketplace platform allowed teachers to exchange and sell their educational resources. The platform was built using the no-code tool Bubble.io, overcoming design limitations with skillfully blended custom JavaScript and CSS code to achieve the desired aesthetics and responsiveness.`,
+        description: `As a fresh frontend developer, I landed on this project through my first job as a frontend developer. The project involved building a marketplace platform allowed teachers to exchange and sell their educational resources. The platform was built using the no-code tool Bubble.io, overcoming design limitations with blended custom JavaScript and CSS code to achieve the desired aesthetics and responsiveness.`,
         longDescription: `<p>The objective of the project was to create a user-friendly and efficient marketplace platform where teachers could easily exchange and sell educational resources. The platform needed to handle various user interactions, provide seamless payment processing, ensure data security, and deliver a visually appealing user interface.</p>
     <br/>
     <br/>
@@ -36467,11 +36470,11 @@ const projectsData = [
     <br/>
     <ul style="list-style-type: disc; padding-left: 20px;">
     <li><b>User Registration and Authentication: </b>A seamless and secure registration process that allows teachers to create accounts using their LinkedIn or Google credentials or by providing their email.</li>
-    <li><b>Material Upload and Management: </b>Teachers are able to easily upload their educational materials, including documents, presentations, worksheets, and more. The platform provides efficient management features, allowing teachers to edit, delete, save drafts, and publish their materials.</li>
-    <li><b>Advanced Search and Filtering: </b>A powerful search engine that allows users to find relevant materials based on specific criteria, such as grade level, subject, price, format, and resource type. The platform provides an intuitive and user-friendly filtering system to refine search results.</li>
+    <li><b>Material Upload and Management: </b>Teachers are able to easily upload their educational resources, including documents, presentations, worksheets, and more. The platform provides efficient management features, allowing teachers to edit, delete, save drafts, and publish their resources.</li>
+    <li><b>Advanced Search and Filtering: </b>A powerful search engine that allows users to find relevant resources based on specific criteria, such as grade level, subject, price, format, and resource type. The platform provides an intuitive and user-friendly filtering system to refine search results.</li>
     <li><b>Reviews and Ratings: </b>Teachers are able to receive feedback from buyers through a review and rating system.</li>
     <li><b>Payment Processing: </b>Integration with a secure and reliable payment gateway to facilitate transactions between buyers and sellers.</li>
-    <li><b>User and Admin Dashboards: </b> Personalized dashboards for teachers to manage their uploaded materials, track sales and payments, view reviews and ratings, and monitor their overall activity on the platform and administrative dashboard that empowers platform administrators to manage user accounts.</li>
+    <li><b>User and Admin Dashboards: </b>Personalized dashboards for teachers to manage their uploaded resources, track sales and payments, view reviews and ratings, and monitor their overall activity on the platform and administrative dashboard that empowers platform administrators to manage user accounts.</li>
     <li><b>Social Features: </b>The ability for users to follow other teachers' profiles, fostering a sense of community and facilitating collaboration and knowledge-sharing among educators.</li>
     </ul>
     <br/>
@@ -36479,14 +36482,14 @@ const projectsData = [
     Challenges and Solutions:
     <br/>
     <ul style="list-style-type: disc; padding-left: 20px;">
-    <li><b>Database Limitations for Storing Materials: </b>Although bubble.io has an integrated cloudfront based database, it’s capacity can be very low for handling such a large amount of resources. To overcome these limitations we integrated a cloud storage service called Wasabi. This allowed us to securely store the educational materials uploaded by teachers and ensured that the platform could handle a large volume of files without any database capacity issues.</li>
+    <li><b>Database Limitations for Storing resources: </b>Although bubble.io has an integrated cloudfront based database, its capacity can be very low for handling such a large amount of resources. To overcome these limitations we integrated a cloud storage service called Wasabi. This allowed us to securely store the educational resources uploaded by teachers and ensured that the platform could handle a large volume of files without any database capacity issues.</li>
     <li><b>Customization of UI Elements: </b>Bubble.io has predefined UI elements, which sometimes didn't align with the UI design requirements. To address this challenge, we utilized custom JavaScript and CSS code through the API Connector feature. This allowed us to implement the desired styling and make the UI elements match the specifications provided by the UI/UX designer.</li>
     <li><b>Responsive Design Limitations: </b>Bubble.io had limited options for responsive design, making it challenging to achieve a fully responsive user interface. However, we later leveraged Bubble's new responsive engine, which introduced more advanced features and capabilities.</li>
     <li><b>Integration of External Services: </b>Integrating external services like Algolia for the search engine and Wasabi for cloud storage posed some challenges. However, we made use of Bubble.io's API Connector feature, which allowed us to connect and communicate with external services seamlessly. By utilizing this feature, we successfully integrated Algolia for advanced search functionality.</li>
     </ul>
     <br/>
     <br/>
-    <p>Throughout this project, I gained invaluable insights and learnings as a frontend developer. Firstly, I discovered the importance of finding creative solutions when faced with limitations. I learned the power of customization through the utilization of custom JavaScript and CSS code, enabling me to align UI elements with the desired design specifications. The experience of working with Bubble.io's responsive engine taught me the significance of staying updated on new features and improvements to ensure optimal user experiences across devices. Integrating external services like Algolia reinforced the importance of leveraging APIs to expand functionality. Overall, this project equipped me with a range of technical skills and problem-solving abilities, empowering me to build robust and user-friendly marketplace platforms in the future.
+    <p>Throughout this project, I gained invaluable insights and learnings as a frontend developer. Firstly, I discovered the importance of finding creative solutions when faced with limitations. I learned the power of customization through the utilization of custom JavaScript and CSS code, enabling me to align UI elements with the desired design specifications. The experience of working with Bubble.io's responsive engine taught me the significance of staying updated on new features and improvements to ensure optimal user experiences across devices. Integrating external services like Algolia reinforced the importance of using APIs to expand functionality. Overall, this project equipped me with a range of technical skills and problem-solving abilities, empowering me to build robust and user-friendly marketplace platforms in the future.
     </p>
     `,
         resources: ["Bubble.io"],

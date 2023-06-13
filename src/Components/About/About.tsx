@@ -5,20 +5,6 @@ import { Download, GithubIcon, LinkedinIcon } from "../../assets";
 import { AboutProps, Roles } from "./About.types";
 
 const About: FunctionComponent<AboutProps> = ({ sectionRef }): ReactElement => {
-  function spliceIntoChunks(arr: any, chunkSize: any) {
-    const res = [];
-    while (arr.length > 0) {
-      const chunk = arr.splice(0, chunkSize);
-      res.push(chunk);
-    }
-    return res;
-  }
-
-  const rolesChunks = spliceIntoChunks(
-    personalData.professionalBiography.roles,
-    2
-  );
-
   return (
     <Section
       sectionRef={sectionRef}
@@ -29,47 +15,44 @@ const About: FunctionComponent<AboutProps> = ({ sectionRef }): ReactElement => {
         <div className="text-4xl font-bold text-gray-400 mb-[60px]">
           {"about me"}
         </div>
-        <div className="flex flex-col md:flex-row gap-10 mb-20">
-          <div className="min-w-[190px] w-[190px] h-[190px]">
-            <img
-              className="block w-full"
-              src={require(`../../assets/otherImages/my-photo.png`).default}
-              alt={`My photo`}
-            />
+        <div className="flex flex-col xl:flex-row gap-10 xl:gap-[60px]">
+          <div className="flex flex-col md:flex-row gap-[60px] w-fit">
+            <div className="min-w-[190px] w-[190px] h-[190px]">
+              <img
+                className="block w-full"
+                src={require(`../../assets/otherImages/my-photo.png`).default}
+                alt={`My photo`}
+              />
+            </div>
+
+            <div className="w-fit text-sm">
+              <p
+                className="mb-5 text-gray-50"
+                dangerouslySetInnerHTML={{
+                  __html: personalData.personalBiography
+                }}
+              ></p>
+              <p
+                className="mb-5 text-gray-50"
+                dangerouslySetInnerHTML={{
+                  __html: personalData.professionalBiography.description
+                }}
+              ></p>
+            </div>
           </div>
 
-          <div className="w-fit text-sm">
-            <p
-              className="mb-5 text-gray-50"
-              dangerouslySetInnerHTML={{
-                __html: personalData.personalBiography
-              }}
-            ></p>
-            <p
-              className="mb-5 text-gray-50"
-              dangerouslySetInnerHTML={{
-                __html: personalData.professionalBiography.description
-              }}
-            ></p>
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-5">
-          <span className="text-gray-400 text-lg font-bold pl-4">
-            {"experience"}
-          </span>
-          <div className="flex flex-row flex-wrap gap-5 w-full justify-between">
-            {rolesChunks.map((roleList, index) => (
-              <ul key={index} className="list-disc pl-3 flex flex-col gap-5">
-                {roleList.map((roleItem: Roles, index: number) => (
+          <div className="flex flex-col gap-5 md:ml-[250px] xl:ml-0 lg:w-[550px]">
+            <ul className="list-disc pl-3 flex flex-col gap-5">
+              {personalData.professionalBiography.roles.map(
+                (roleItem: Roles, index: number) => (
                   <li key={index} className="mb-3 text-gray-50 text-sm">
-                    <span className="font-bold mr-2 block">{`${roleItem.company}`}</span>
+                    <span className="font-bold mr-2">{`${roleItem.company} -`}</span>
                     <span>{roleItem.role}</span>
                     <span className="block">{roleItem.date}</span>
                   </li>
-                ))}
-              </ul>
-            ))}
+                )
+              )}
+            </ul>
           </div>
         </div>
 
