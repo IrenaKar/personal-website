@@ -107,7 +107,7 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
                 className="flex flex-row gap-5 cursor-pointer xl:mr-5 w-full sm:w-fit justify-between"
               >
                 <span className="text-sm text-gray-500 font-bold">
-                  {showDetails ? "details" : "view details"}
+                  {showDetails ? "hide details" : "view details"}
                 </span>
                 <ArrowDownIcon
                   className={`${

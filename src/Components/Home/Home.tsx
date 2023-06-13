@@ -46,7 +46,7 @@ const Home: FunctionComponent<HomeProps> = (): ReactElement => {
       className="flex items-center justify-start sm:justify-center min-h-[100vh]"
     >
       <>
-        <div className="min-h-[300px] sm:min-h-[210px]">
+        <div className="min-h-[250px] sm:min-h-[210px]">
           <h1 className="max-w-[270px] sm:max-w-[100%] self-start text-6xl lg:text-8xl xl:text-9xl font-bold text-gray-600 mb-5 leading-tight md:whitespace-nowrap">
             {typingHeading}
           </h1>

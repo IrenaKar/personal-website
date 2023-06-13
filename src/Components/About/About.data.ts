@@ -1,8 +1,7 @@
 export const personalData = {
-  personalBiography: `<b>A frontend developer based in dynamic Berlin.</b> While my professional journey has taken me through various fields, it is in frontend development that I have discovered my true passion and purpose.
-  Coming from a diverse professional background, including financial management and accounting, I found myself most fulfilled when I started writing lines of code and bringing designs to life. 
-  I love the challenges that frontend development presents and the opportunity to constantly explore and push the boundaries of what is possible.
-  Let's collaborate as I leverage my unique personality, experiences and knowledge to create innovative and impactful web solutions. Together, let's forge a path towards excellence in frontend development.`,
+  personalBiography: `<b>Berlin based promising frontend developer!</b> While my professional journey has taken me through various fields, I have discovered my true passion and purpose in frontend development.
+  Coming from a diverse professional background, including financial management, accounting and human resources, I found myself most fulfilled when I started writing lines of code and bringing designs to life. 
+  I love the challenges that frontend development presents and the opportunity to constantly explore and push the boundaries of what is possible. I’m spending practically my whole day experimenting with a variety of frontend development tools, explore different approaches to solving problems, and improve my ability to create beautiful and user-friendly web interfaces.`,
   professionalBiography: {
     description: `My journey as a frontend developer began when I enrolled in a web development academy. Since then, I've successfully completed two additional courses for React and Typescript and also participated in numerous projects, applying the practical skills I acquired during my training.
     In addition to my frontend expertise, I bring valuable experience from other administrative works in the past. Over the years, I have honed my skills, becoming a diligent, hardworking, and professional employee.`,
