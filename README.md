@@ -1,6 +1,6 @@
-# Project Title
+# Personal portfolio website
 
-A brief introduction and overview of your project.
+Welcome to my personal portfolio website! This interactive and responsive site showcases my projects, skills, and expertise. Built with React, TypeScript, Tailwind Css, and custom Webpack configuration, it provides a user-friendly experience for visitors to explore my work and learn more about me. Feel free to browse through my projects and get in touch using the contact form.
 
 ## Table of Contents
 
@@ -8,10 +8,6 @@ A brief introduction and overview of your project.
 - [Features](#features)
 - [Technologies](#technologies)
 - [Getting Started](#getting-started)
-
-## Project Description
-
-Welcome to my personal portfolio website! This interactive and responsive site showcases my projects, skills, and expertise. Built with React, TypeScript, Tailwind Css, and custom Webpack configuration, it provides a user-friendly experience for visitors to explore my work and learn more about me. Feel free to browse through my projects and get in touch using the contact form.
 
 ## Features
 
