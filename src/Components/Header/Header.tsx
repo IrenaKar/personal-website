@@ -2,7 +2,7 @@ import React, {
   useState,
   useEffect,
   FunctionComponent,
-  ReactElement
+  ReactElement,
 } from "react";
 import BurgerMenu from "../BurgerIcon/BurgerIcon";
 import { navigationLinksData } from "./Header.data";
@@ -15,7 +15,9 @@ const Header: FunctionComponent = (): ReactElement => {
 
   const defaultSectionId = "home";
   const sections = document.querySelectorAll("section");
-  const activeSection = useScrollSpy(sections, defaultSectionId);
+
+  const headerElement: HTMLElement | null = document.getElementById("header");
+  const activeSection = useScrollSpy(sections, defaultSectionId, headerElement);
 
   const showBUrgerMenu = () => {
     setMobileMenuActive(!mobileMenuActive);
@@ -30,7 +32,7 @@ const Header: FunctionComponent = (): ReactElement => {
   }, []);
 
   return (
-    <div>
+    <div id="header" className="h-[72px]">
       <div
         className={`${mobileMenuActive ? "flex flex-col bg-white" : "hidden"} ${
           scrollPosition ? "bg-white shadow-md" : "bg-stone-50"
@@ -60,7 +62,7 @@ const Header: FunctionComponent = (): ReactElement => {
                 href={`#${navLink}`}
                 onClick={(e) => {
                   setMobileMenuActive(false);
-                  onScrollSection(e);
+                  onScrollSection(e, headerElement);
                 }}
               >
                 {navLink === "about-me" ? navLink.replace(/-/g, " ") : navLink}
@@ -71,7 +73,7 @@ const Header: FunctionComponent = (): ReactElement => {
       </div>
 
       {!mobileMenuActive && (
-        <div className="w-full h-[68px] bg-white z-20 fixed md:hidden">
+        <div className="w-full h-[55px] bg-white z-20 fixed md:hidden">
           <BurgerMenu onClick={showBUrgerMenu} />
         </div>
       )}
