@@ -2,7 +2,7 @@ import React, {
   useState,
   useEffect,
   FunctionComponent,
-  ReactElement
+  ReactElement,
 } from "react";
 import Section from "../Section/Section";
 import { ArrowDownIcon } from "../../assets/index";
@@ -18,8 +18,10 @@ const Home: FunctionComponent<HomeProps> = (): ReactElement => {
   const [showSubHeading, setShowSubHeading] = useState(false);
   const [showArrow, setShowArrow] = useState(false);
   const [offset, setOffset] = useState(5);
+  const headerElement: HTMLElement | null = document.getElementById("header");
+  const headerHeight = headerElement?.offsetHeight;
 
-  const handleScroll = () => setOffset(window.pageYOffset - 5);
+  const handleScroll = () => setOffset(window.scrollY - (headerHeight ?? 0));
 
   useEffect(() => {
     scrollToSectionHandler(handleScroll);
@@ -64,7 +66,10 @@ const Home: FunctionComponent<HomeProps> = (): ReactElement => {
         </div>
 
         {showArrow && (
-          <a href="#about-me" onClick={(e) => onScrollSection(e)}>
+          <a
+            href="#about-me"
+            onClick={(e) => onScrollSection(e, headerElement)}
+          >
             <ArrowDownIcon
               className={`${
                 minHeight ? "fade pointer" : "hidden"

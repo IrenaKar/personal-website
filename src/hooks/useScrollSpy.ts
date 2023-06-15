@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 
 const useScrollSpy = (
   sections: NodeListOf<HTMLElement>,
-  defaultSectionId: string
+  defaultSectionId: string,
+  headerElement: HTMLElement | null
 ): string | null => {
   const [activeSection, setActiveSection] = useState<string | null>(
     defaultSectionId
@@ -16,12 +17,10 @@ const useScrollSpy = (
       const scrollPosition = window.scrollY;
 
       const currentSection = Array.from(sections).find((section) => {
+        const headerHeight = headerElement?.offsetHeight;
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        return (
-          scrollPosition >= sectionTop &&
-          scrollPosition < sectionTop + sectionHeight
-        );
+        const sectionHeight = section.offsetHeight - (headerHeight ?? 0);
+        return scrollPosition < sectionTop + sectionHeight;
       });
 
       const newActiveSection = currentSection ? currentSection.id : null;

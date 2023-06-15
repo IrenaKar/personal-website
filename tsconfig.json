@@ -7,9 +7,6 @@
     "noUnusedParameters": true,
     "noUnusedLocals": true,
     "baseUrl": "src",
-    "paths": {
-      "assets/*": ["assets/*"],
-    },
     "lib": [
       "dom",
       "esnext"
