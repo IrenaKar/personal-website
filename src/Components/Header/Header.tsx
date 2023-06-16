@@ -32,9 +32,11 @@ const Header: FunctionComponent = (): ReactElement => {
   }, []);
 
   return (
-    <div id="header" className="h-[72px]">
+    <div id="header" className="h-[55px] md:h-[72px]">
       <div
-        className={`${mobileMenuActive ? "flex flex-col bg-white" : "hidden"} ${
+        className={`${
+          mobileMenuActive ? "flex flex-col bg-white openMenu" : "hidden"
+        } ${
           scrollPosition ? "bg-white shadow-md" : "bg-stone-50"
         } z-10 fixed md:flex w-[100vw] h-[100vh] md:h-fit p-5`}
       >
@@ -73,7 +75,11 @@ const Header: FunctionComponent = (): ReactElement => {
       </div>
 
       {!mobileMenuActive && (
-        <div className="w-full h-[55px] bg-white z-20 fixed md:hidden">
+        <div
+          className={`${
+            scrollPosition && "shadow-md"
+          } w-full h-[55px] z-20 fixed md:hidden bg-stone-50`}
+        >
           <BurgerMenu onClick={showBUrgerMenu} />
         </div>
       )}
