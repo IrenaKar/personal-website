@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -9,22 +10,20 @@
   <link rel="preload" href="./Inter/Inter-Regular.woff" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./Inter/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
 
-
-  <link href="{%=o.htmlWebpackPlugin.files.favicon%}" rel="shortcut icon">
+  <link href="<%= htmlWebpackPlugin.files.favicon %>" rel="shortcut icon">
 
   <% if (htmlWebpackPlugin.options.previewImage) { %>
-    <link href="<%= htmlWebpackPlugin.options.previewImage %>" rel="shortcut icon">
+    <link href="<%= htmlWebpackPlugin.options.previewImage %>" rel="apple-touch-icon">
     <meta property="og:image" content="<%= htmlWebpackPlugin.options.previewImage %>">
-    <% } %>
+  <% } %>
 
+  <link rel="manifest" href="./manifest.json">
 
-      <link rel="manifest" href="./manifest.json">
-
-      <title>Irena's Portfolio</title>
+  <title>Irena's Portfolio</title>
 </head>
-
-</html>
 
 <body>
   <div id="app-root"></div>
 </body>
+
+</html>
