@@ -29,13 +29,13 @@ const About: FunctionComponent<AboutProps> = ({ sectionRef }): ReactElement => {
               <p
                 className="mb-5 text-gray-50"
                 dangerouslySetInnerHTML={{
-                  __html: personalData.personalBiography
+                  __html: personalData.personalBiography,
                 }}
               ></p>
               <p
                 className="mb-5 text-gray-50"
                 dangerouslySetInnerHTML={{
-                  __html: personalData.professionalBiography.description
+                  __html: personalData.professionalBiography.description,
                 }}
               ></p>
             </div>

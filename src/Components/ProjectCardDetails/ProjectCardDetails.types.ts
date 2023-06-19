@@ -1,3 +1,3 @@
 export interface ProjectCardDetailsProps {
-    longDescription: string;
+  longDescription: string;
 }

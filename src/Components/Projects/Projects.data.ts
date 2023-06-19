@@ -28,7 +28,7 @@ export const projectsData = [
     Working extensively with TypeScript, I gained a strong understanding of TypeScript's type system, enabling me to catch potential errors during development and improve the overall quality of the codebase.</p>`,
     resources: ["react", "typescript", "tailwind"],
     projectUrl: "https://goodcarbon.earth/",
-    github: ""
+    github: "",
   },
   {
     image: "resourceya-preview.png",
@@ -65,7 +65,7 @@ export const projectsData = [
     `,
     resources: ["Bubble.io"],
     projectUrl: "https://resourceya.com/",
-    github: ""
+    github: "",
   },
   {
     image: "coin-tracker-preview.png",
@@ -104,7 +104,7 @@ export const projectsData = [
 
     resources: ["html", "css", "mui", "react", "javascript"],
     projectUrl: "https://cointrackerproject.netlify.app/#/",
-    github: "https://github.com/IrenaKar/Coin-tracker"
+    github: "https://github.com/IrenaKar/Coin-tracker",
   },
   {
     image: "notes-preview.png",
@@ -146,7 +146,7 @@ export const projectsData = [
     resources: ["html", "css", "javascript", "react", "firebase"],
     projectUrl:
       "https://6317089d6702a72ca289df82--mypersonalnotesmanager.netlify.app/",
-    github: "https://github.com/IrenaKar/notes"
+    github: "https://github.com/IrenaKar/notes",
   },
   {
     image: "race-preview.png",
@@ -180,8 +180,8 @@ export const projectsData = [
     resources: ["html", "css", "bootstrap", "jquery"],
     projectUrl:
       "https://60f9c8d475e5b73f1ab9af4e--nervous-goldberg-4a1b9b.netlify.app/",
-    github: "https://github.com/IrenaKar/Racing-car"
-  }
+    github: "https://github.com/IrenaKar/Racing-car",
+  },
   // {
   //   image: "bikes-preview.png",
   //   title: "Bikes",
