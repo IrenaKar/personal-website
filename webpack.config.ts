@@ -4,11 +4,14 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
   mode: prod ? "production" : "development",
   entry: "./src/index.tsx",
   output: {
+    filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
   },
   module: {
@@ -52,6 +55,9 @@ module.exports = {
     ],
   },
   devtool: prod ? undefined : "source-map",
+  optimization: {
+    minimizer: [new TerserPlugin(), new OptimizeCssAssetsPlugin()],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
