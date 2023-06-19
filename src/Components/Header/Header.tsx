@@ -64,7 +64,7 @@ const Header: FunctionComponent = (): ReactElement => {
                 href={`#${navLink}`}
                 onClick={(e) => {
                   setMobileMenuActive(false);
-                  onScrollSection(e, headerElement);
+                  onScrollSection(e);
                 }}
               >
                 {navLink === "about-me" ? navLink.replace(/-/g, " ") : navLink}

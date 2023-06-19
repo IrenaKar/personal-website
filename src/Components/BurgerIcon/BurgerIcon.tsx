@@ -2,7 +2,7 @@ import React, { FunctionComponent, ReactElement } from "react";
 import { BurgerMenuProps } from "./BurgerIcon.types";
 
 const BurgerMenu: FunctionComponent<BurgerMenuProps> = ({
-  onClick
+  onClick,
 }): ReactElement => {
   return (
     <div

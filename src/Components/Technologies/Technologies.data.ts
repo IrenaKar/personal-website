@@ -9,6 +9,6 @@ export const technologiesData = {
     "mui",
     "html",
     "css",
-    "bootstrap"
-  ]
+    "bootstrap",
+  ],
 };

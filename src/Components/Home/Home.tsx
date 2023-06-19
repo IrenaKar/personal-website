@@ -18,10 +18,8 @@ const Home: FunctionComponent<HomeProps> = (): ReactElement => {
   const [showSubHeading, setShowSubHeading] = useState(false);
   const [showArrow, setShowArrow] = useState(false);
   const [offset, setOffset] = useState(5);
-  const headerElement: HTMLElement | null = document.getElementById("header");
-  const headerHeight = headerElement?.offsetHeight;
 
-  const handleScroll = () => setOffset(window.scrollY - (headerHeight ?? 0));
+  const handleScroll = () => setOffset(window.scrollY);
 
   useEffect(() => {
     scrollToSectionHandler(handleScroll);
@@ -66,10 +64,7 @@ const Home: FunctionComponent<HomeProps> = (): ReactElement => {
         </div>
 
         {showArrow && (
-          <a
-            href="#about-me"
-            onClick={(e) => onScrollSection(e, headerElement)}
-          >
+          <a href="#about-me" onClick={(e) => onScrollSection(e)}>
             <ArrowDownIcon
               className={`${
                 minHeight ? "fade pointer" : "hidden"

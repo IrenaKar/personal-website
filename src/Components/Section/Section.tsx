@@ -5,8 +5,8 @@ const Section: FunctionComponent<SectionProps> = ({
   children,
   className,
   id,
-  sectionRef
-}):ReactElement => {
+  sectionRef,
+}): ReactElement => {
   return (
     <section
       ref={sectionRef}

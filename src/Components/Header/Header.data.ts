@@ -3,5 +3,5 @@ export const navigationLinksData = [
   "about-me",
   "technologies",
   "projects",
-  "contact"
+  "contact",
 ];

@@ -1,1 +1,1 @@
-export type ScrollSpyProps =  string;
+export type ScrollSpyProps = string;

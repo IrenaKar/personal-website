@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-const useTypingEffect = (firstWordsGroup: string[]):string => {
+const useTypingEffect = (firstWordsGroup: string[]): string => {
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [reverse, setReverse] = useState(false);
@@ -32,7 +32,7 @@ const useTypingEffect = (firstWordsGroup: string[]):string => {
     return () => clearTimeout(timeout);
   }, [subIndex, index, reverse, firstWordsGroup]);
 
-  const typing = firstWordsGroup[index].substring(0, subIndex)
+  const typing = firstWordsGroup[index].substring(0, subIndex);
 
   return typing;
 };
