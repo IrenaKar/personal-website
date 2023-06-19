@@ -8,7 +8,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
-  mode: prod ? "production" : "development",
+  mode: "production",
   entry: "./src/index.tsx",
   output: {
     filename: "bundle.js",
@@ -54,7 +54,12 @@ module.exports = {
       },
     ],
   },
-  devtool: prod ? undefined : "source-map",
+  devtool: "source-map",
+  performance: {
+    hints: "warning",
+    maxAssetSize: 1000 * 1024,
+    maxEntrypointSize: 340 * 1024,
+  },
   optimization: {
     minimizer: [new TerserPlugin(), new OptimizeCssAssetsPlugin()],
   },
