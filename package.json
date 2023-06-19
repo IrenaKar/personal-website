@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --port 3000",
-    "build": "set NODE_ENV=production&& webpack",
+    "build": "webpack --mode production",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx}\""
   },
   "author": "Irena Karamachoska",
@@ -25,6 +25,8 @@
     "@types/react-dom": "^18.2.4",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.8.1",
+    "dotenv": "^16.3.1",
+    "dotenv-webpack": "^8.0.1",
     "emailjs-com": "^3.2.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.1",
