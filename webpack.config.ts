@@ -1,5 +1,4 @@
-const webpack = require("webpack");
-const prod = process.env.NODE_ENV === "production webpack";
+const prod = process.env.PROD;
 const path = require("path");
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -7,6 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
 
 module.exports = {
   mode: "production",
@@ -55,7 +55,6 @@ module.exports = {
       },
     ],
   },
-  devtool: prod ? false : "source-map",
   performance: {
     hints: "warning",
     maxAssetSize: 1000 * 1024,
@@ -72,6 +71,7 @@ module.exports = {
       filename: "index.html",
     }),
     new MiniCssExtractPlugin(),
+    new Dotenv(),
     new CopyWebpackPlugin({
       patterns: [
         { from: "./public/website.png", to: "website.png" },
