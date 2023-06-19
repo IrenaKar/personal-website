@@ -2,15 +2,16 @@ import { FormEvent, MutableRefObject } from "react";
 import emailjs from "@emailjs/browser";
 
 export const onScrollSection = (
-  e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
-  headerElement: HTMLElement | null
+  e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
 ): void => {
   e.preventDefault();
   const target = window.document.getElementById(
     e.currentTarget.href.split("#")[1]
   );
-  const headerHeight = headerElement?.offsetHeight;
+
   if (target) {
+    const headerElement = document.getElementById("header");
+    const headerHeight = headerElement?.offsetHeight;
     const targetPosition =
       target.getBoundingClientRect().top - (headerHeight ?? 0);
     const offsetPosition = targetPosition;

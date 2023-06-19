@@ -2,7 +2,7 @@ import React, { FunctionComponent, ReactElement } from "react";
 import { ProjectCardDetailsProps } from "./ProjectCardDetails.types";
 
 const ProjectCardDetails: FunctionComponent<ProjectCardDetailsProps> = ({
-  longDescription
+  longDescription,
 }): ReactElement => {
   return (
     <div className="pt-5 sm:pt-10 text-gray-400">
@@ -12,7 +12,7 @@ const ProjectCardDetails: FunctionComponent<ProjectCardDetailsProps> = ({
       <div
         className="text-sm text-gray-600 text-left mt-0 sm:mt-3"
         dangerouslySetInnerHTML={{
-          __html: longDescription
+          __html: longDescription,
         }}
       />
     </div>

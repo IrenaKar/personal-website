@@ -9,31 +9,31 @@ export const personalData = {
       {
         company: "goodcarbon, Berlin",
         date: "December 2022 - ",
-        role: "Frontend Developer"
+        role: "Frontend Developer",
       },
       {
         company: "Ryaktive Software Development Agency, Skopje",
         date: "November 2021 - December 2022",
-        role: "Frontend Developer"
+        role: "Frontend Developer",
       },
       {
         company: "ODW-ELEKTRIK, Struga",
         date: "May 2019 - November 2021",
-        role: "Accountant and Human resources assistant"
+        role: "Accountant and Human resources assistant",
       },
       {
         company: "Moneymax Financial Company, Ohrid",
         date: "May 2018 - November 2019",
-        role: "Loan officer and Debt collector"
+        role: "Loan officer and Debt collector",
       },
       {
         company: "INCA Cultural Organisation, Struga",
         date: "May 2014 - October 2019",
-        role: "Financial Manager"
-      }
-    ]
+        role: "Financial Manager",
+      },
+    ],
   },
   linkedIn: "https://www.linkedin.com/in/irena-karamachoska-55944a204/",
   github: "https://github.com/IrenaKar",
-  resume: "./IrenaKaramachoskaResume2023"
+  resume: "./IrenaKaramachoskaResume2023",
 };

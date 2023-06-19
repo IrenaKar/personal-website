@@ -3,7 +3,7 @@ import { ProjectCardProps } from "./ProjectCard.types";
 import {
   ArrowDownIcon,
   ExternalLinkIcon,
-  GithubIcon
+  GithubIcon,
 } from "../../assets/index";
 import ProjectCardDetails from "../ProjectCardDetails/ProjectCardDeatils";
 
@@ -14,7 +14,7 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
   resources,
   projectUrl,
   github,
-  longDescription
+  longDescription,
 }): ReactElement => {
   const [showDetails, setShowDetails] = useState(false);
 
@@ -50,7 +50,7 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
           style={{
             backgroundImage: `url(${
               require(`../../assets/projectsImages/${image}`).default
-            })`
+            })`,
           }}
         ></div>
 
@@ -59,7 +59,7 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
           <div className="h-full flex flex-col gap-8 xl:gap-1 justify-between">
             <div
               dangerouslySetInnerHTML={{
-                __html: description
+                __html: description,
               }}
               className="text-gray-600 text-sm"
             />
