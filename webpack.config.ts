@@ -1,3 +1,4 @@
+const webpack = require("webpack");
 const prod = process.env.NODE_ENV === "production webpack";
 const path = require("path");
 
@@ -54,7 +55,7 @@ module.exports = {
       },
     ],
   },
-  devtool: "source-map",
+  devtool: prod ? false : "source-map",
   performance: {
     hints: "warning",
     maxAssetSize: 1000 * 1024,
