@@ -1,28 +1,42 @@
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Irena's personal portfolio website" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Irena's personal portfolio website" />
+    <link
+      rel="preload"
+      href="Inter/Inter-Regular.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="Inter/Inter-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
 
-  <link rel="preload" href="Inter-Regular.woff" as="font" type="font/woff" crossorigin>
-  <link rel="preload" href="Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="<%= htmlWebpackPlugin.files.favicon %>" rel="shortcut icon" />
 
-
-  <link href="<%= htmlWebpackPlugin.files.favicon %>" rel="shortcut icon">
-
-  <% if (htmlWebpackPlugin.options.previewImage) { %>
-    <link href="<%= htmlWebpackPlugin.options.previewImage %>" rel="shortcut icon">
-    <meta property="og:image" content="<%= htmlWebpackPlugin.options.previewImage %>">
+    <% if (htmlWebpackPlugin.options.previewImage) { %>
+    <link
+      href="<%= htmlWebpackPlugin.options.previewImage %>"
+      rel="shortcut icon"
+    />
+    <meta
+      property="og:image"
+      content="<%= htmlWebpackPlugin.options.previewImage %>"
+    />
     <% } %>
 
+    <link rel="manifest" href="manifest.json" />
 
-      <link rel="manifest" href="manifest.json">
-
-      <title>Irena's Portfolio</title>
-</head>
-
+    <title>Irena's Portfolio</title>
+  </head>
 </html>
 
 <body>
