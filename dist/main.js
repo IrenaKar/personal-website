@@ -45320,8 +45320,7 @@ a:hover::after {
                             setMobileMenuActive(false);
                             (0,
                             _helpers_helpers__WEBPACK_IMPORTED_MODULE_4__.onScrollSection)(
-                              e,
-                              headerElement
+                              e
                             );
                           },
                         },
@@ -45434,10 +45433,7 @@ a:hover::after {
           react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
           const [offset, setOffset] = (0,
           react__WEBPACK_IMPORTED_MODULE_0__.useState)(5);
-          const headerElement = document.getElementById("header");
-          const headerHeight = headerElement?.offsetHeight;
-          const handleScroll = () =>
-            setOffset(window.scrollY - (headerHeight ?? 0));
+          const handleScroll = () => setOffset(window.scrollY);
           (0, react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
             (0,
             _helpers_helpers__WEBPACK_IMPORTED_MODULE_5__.scrollToSectionHandler)(
@@ -45504,8 +45500,7 @@ a:hover::after {
                     onClick: (e) =>
                       (0,
                       _helpers_helpers__WEBPACK_IMPORTED_MODULE_5__.onScrollSection)(
-                        e,
-                        headerElement
+                        e
                       ),
                   },
                   react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -46342,13 +46337,14 @@ a:hover::after {
             /*! @emailjs/browser */ "./node_modules/@emailjs/browser/es/index.js"
           );
 
-        const onScrollSection = (e, headerElement) => {
+        const onScrollSection = (e) => {
           e.preventDefault();
           const target = window.document.getElementById(
             e.currentTarget.href.split("#")[1]
           );
-          const headerHeight = headerElement?.offsetHeight;
           if (target) {
+            const headerElement = document.getElementById("header");
+            const headerHeight = headerElement?.offsetHeight;
             const targetPosition =
               target.getBoundingClientRect().top - (headerHeight ?? 0);
             const offsetPosition = targetPosition;
