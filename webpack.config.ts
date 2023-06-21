@@ -58,7 +58,7 @@ module.exports = {
   performance: {
     hints: "warning",
     maxAssetSize: 1000 * 1024,
-    maxEntrypointSize: 340 * 1024,
+    maxEntrypointSize: 500 * 1024,
   },
   optimization: {
     minimizer: [new TerserPlugin(), new OptimizeCssAssetsPlugin()],
