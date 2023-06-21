@@ -25,7 +25,7 @@ const Contact: FunctionComponent = (): ReactElement => {
             }
             <a className="font-bold" href={personalData.linkedIn}>
               {"LinkedIn"}
-            </a>{" "}
+            </a>
             {"profile."}
           </div>
         </div>
