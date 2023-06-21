@@ -15,7 +15,7 @@ const Contact: FunctionComponent = (): ReactElement => {
         <div className="text-gray-600 mr-auto sm:w-[50%] lg:w-[40%] flex flex-col sm:gap-5">
           <div className="text-2xl lg:text-3xl xl:text-4xl leading-snug mb-5">
             <span className="font-bold">
-              {"I am super exited to talk in details about my projects"}
+              {"I am super excited to talk in details about my projects"}
             </span>
             <span className="block">{"and share my experience with you!"}</span>
           </div>
